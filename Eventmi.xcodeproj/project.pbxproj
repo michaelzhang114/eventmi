@@ -14,8 +14,10 @@
 		B4C9EDA4238DBADC00A2C7DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C9EDA3238DBADC00A2C7DC /* Preview Assets.xcassets */; };
 		B4C9EDB2238DBADC00A2C7DC /* EventmiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9EDB1238DBADC00A2C7DC /* EventmiTests.swift */; };
 		B4C9EDBD238DBADC00A2C7DC /* EventmiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9EDBC238DBADC00A2C7DC /* EventmiUITests.swift */; };
-		B4CEF6B52396D032001FA2EF /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B42396D032001FA2EF /* ContactCardView.swift */; };
+		B4CEF6B52396D032001FA2EF /* ContactCardViewHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B42396D032001FA2EF /* ContactCardViewHorizontal.swift */; };
 		B4CEF6B72396D614001FA2EF /* InviteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */; };
+		B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */; };
+		B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		B4C9EDB8238DBADC00A2C7DC /* EventmiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventmiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C9EDBC238DBADC00A2C7DC /* EventmiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventmiUITests.swift; sourceTree = "<group>"; };
 		B4C9EDBE238DBADC00A2C7DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4CEF6B42396D032001FA2EF /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		B4CEF6B42396D032001FA2EF /* ContactCardViewHorizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewHorizontal.swift; sourceTree = "<group>"; };
 		B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteButtonView.swift; sourceTree = "<group>"; };
+		B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventForm.swift; sourceTree = "<group>"; };
+		B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewVertical.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +145,10 @@
 		B4CEF6B32396D00E001FA2EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B4CEF6B42396D032001FA2EF /* ContactCardView.swift */,
+				B4CEF6B42396D032001FA2EF /* ContactCardViewHorizontal.swift */,
 				B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */,
+				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
+				B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -279,8 +285,10 @@
 			files = (
 				B4CEF6B72396D614001FA2EF /* InviteButtonView.swift in Sources */,
 				B4C9ED9B238DBAD700A2C7DC /* AppDelegate.swift in Sources */,
-				B4CEF6B52396D032001FA2EF /* ContactCardView.swift in Sources */,
+				B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */,
+				B4CEF6B52396D032001FA2EF /* ContactCardViewHorizontal.swift in Sources */,
 				B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */,
+				B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */,
 				B4C9ED9F238DBAD700A2C7DC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
