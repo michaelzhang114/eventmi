@@ -19,6 +19,8 @@
 		B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */; };
 		B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */; };
 		B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */; };
+		B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */; };
+		B4CEF6C12396F0F0001FA2EF /* GroupInviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventForm.swift; sourceTree = "<group>"; };
 		B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewVertical.swift; sourceTree = "<group>"; };
 		B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddView.swift; sourceTree = "<group>"; };
+		B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
+		B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInviteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
 				B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */,
 				B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */,
+				B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */,
+				B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 				B4CEF6B72396D614001FA2EF /* InviteButtonView.swift in Sources */,
 				B4C9ED9B238DBAD700A2C7DC /* AppDelegate.swift in Sources */,
 				B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */,
+				B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */,
 				B4CEF6B52396D032001FA2EF /* ContactCardViewHorizontal.swift in Sources */,
 				B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */,
 				B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */,
+				B4CEF6C12396F0F0001FA2EF /* GroupInviteView.swift in Sources */,
 				B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */,
 				B4C9ED9F238DBAD700A2C7DC /* ContentView.swift in Sources */,
 			);
