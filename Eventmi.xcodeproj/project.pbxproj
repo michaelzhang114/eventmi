@@ -18,6 +18,7 @@
 		B4CEF6B72396D614001FA2EF /* InviteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */; };
 		B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */; };
 		B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */; };
+		B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteButtonView.swift; sourceTree = "<group>"; };
 		B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventForm.swift; sourceTree = "<group>"; };
 		B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardViewVertical.swift; sourceTree = "<group>"; };
+		B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */,
 				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
 				B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */,
+				B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B4CEF6B52396D032001FA2EF /* ContactCardViewHorizontal.swift in Sources */,
 				B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */,
 				B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */,
+				B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */,
 				B4C9ED9F238DBAD700A2C7DC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
