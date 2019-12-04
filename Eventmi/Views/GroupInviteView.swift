@@ -9,13 +9,17 @@
 import SwiftUI
 
 struct GroupInviteView: View {
+    @State var group1 = "group 1 name"
+    @State var group2 = "group 2 name"
+    @State var group3 = "group 3 name"
+    
     var body: some View {
         VStack {
             Text("Who to invite?")
             HStack {
-                GroupCardView()
-                GroupCardView()
-                GroupCardView()
+                GroupCardView(groupName: $group1)
+                GroupCardView(groupName: $group2)
+                GroupCardView(groupName: $group3)
             }
         }
     }

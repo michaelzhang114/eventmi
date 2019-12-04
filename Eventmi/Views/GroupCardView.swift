@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct GroupCardView: View {
+    @Binding var groupName: String
     var body: some View {
         VStack {
             Image("users-icon")
@@ -16,10 +17,8 @@ struct GroupCardView: View {
                 .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
                 .shadow(radius: 10)
                 .frame(width: 50.0, height:50.0)
-            Text("Some group name")
+            Text(groupName)
                 .font(.subheadline)
-            
-            // TODO: create the click action
             
             InviteButtonView()
         }
@@ -27,7 +26,8 @@ struct GroupCardView: View {
 }
 
 struct GroupCardView_Previews: PreviewProvider {
+    @State static var tmp = "some group name"
     static var previews: some View {
-        GroupCardView()
+        GroupCardView(groupName: $tmp)
     }
 }
