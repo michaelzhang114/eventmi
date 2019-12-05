@@ -22,6 +22,7 @@
 		B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */; };
 		B4CEF6C12396F0F0001FA2EF /* GroupInviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */; };
 		F60291A423997BD600AB8A3B /* GroupHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60291A323997BD600AB8A3B /* GroupHomePage.swift */; };
+		F60291A82399B28700AB8A3B /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60291A72399B28700AB8A3B /* LoginPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
 		B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInviteView.swift; sourceTree = "<group>"; };
 		F60291A323997BD600AB8A3B /* GroupHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomePage.swift; sourceTree = "<group>"; };
+		F60291A72399B28700AB8A3B /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			children = (
 				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
 				F60291A323997BD600AB8A3B /* GroupHomePage.swift */,
+				F60291A72399B28700AB8A3B /* LoginPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				B4C9ED9B238DBAD700A2C7DC /* AppDelegate.swift in Sources */,
 				B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */,
 				B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */,
+				F60291A82399B28700AB8A3B /* LoginPage.swift in Sources */,
 				B4CEF6B52396D032001FA2EF /* ContactCardViewHorizontal.swift in Sources */,
 				F60291A423997BD600AB8A3B /* GroupHomePage.swift in Sources */,
 				B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */,
