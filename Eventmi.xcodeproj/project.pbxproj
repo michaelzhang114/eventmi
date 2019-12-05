@@ -153,16 +153,32 @@
 		B4CEF6B32396D00E001FA2EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B4CEF6B42396D032001FA2EF /* ContactCardViewHorizontal.swift */,
-				B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */,
-				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
-				B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */,
-				B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */,
-				B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */,
-				B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */,
-				F60291A323997BD600AB8A3B /* GroupHomePage.swift */,
+				F60291A62399B23800AB8A3B /* Pages */,
+				F60291A52399AFD000AB8A3B /* Components */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F60291A52399AFD000AB8A3B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B4CEF6B62396D614001FA2EF /* InviteButtonView.swift */,
+				B4CEF6BE2396EF28001FA2EF /* GroupCardView.swift */,
+				B4CEF6BC2396EC3A001FA2EF /* QuickAddView.swift */,
+				B4CEF6BA2396E1BB001FA2EF /* ContactCardViewVertical.swift */,
+				B4CEF6B42396D032001FA2EF /* ContactCardViewHorizontal.swift */,
+				B4CEF6C02396F0F0001FA2EF /* GroupInviteView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F60291A62399B23800AB8A3B /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B4CEF6B82396E08D001FA2EF /* CreateEventForm.swift */,
+				F60291A323997BD600AB8A3B /* GroupHomePage.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
