@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4466C042399C4BB001E6D6D /* CreateQuickEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */; };
+		B4466C062399C86C001E6D6D /* BigLongButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C052399C86C001E6D6D /* BigLongButtonView.swift */; };
 		B4C9ED9B238DBAD700A2C7DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9ED9A238DBAD700A2C7DC /* AppDelegate.swift */; };
 		B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9ED9C238DBAD700A2C7DC /* SceneDelegate.swift */; };
 		B4C9ED9F238DBAD700A2C7DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C9ED9E238DBAD700A2C7DC /* ContentView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuickEventForm.swift; sourceTree = "<group>"; };
+		B4466C052399C86C001E6D6D /* BigLongButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLongButtonView.swift; sourceTree = "<group>"; };
 		B4C9ED97238DBAD700A2C7DC /* Eventmi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventmi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C9ED9A238DBAD700A2C7DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C9ED9C238DBAD700A2C7DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				F60291B32399C10200AB8A3B /* FriendInviteView.swift */,
 				F60291AD2399B95800AB8A3B /* SortFilterBarView.swift */,
 				F60291AF2399BAE300AB8A3B /* FriendGroupCard.swift */,
+				B4466C052399C86C001E6D6D /* BigLongButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				F60291A72399B28700AB8A3B /* LoginPage.swift */,
 				F60291A92399B5C400AB8A3B /* FriendsGroupIndexEmpty.swift */,
 				F60291AB2399B8C300AB8A3B /* FriendsGroupIndexOneGroup.swift */,
+				B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CEF6B72396D614001FA2EF /* InviteButtonView.swift in Sources */,
+				B4466C042399C4BB001E6D6D /* CreateQuickEventForm.swift in Sources */,
 				B4C9ED9B238DBAD700A2C7DC /* AppDelegate.swift in Sources */,
 				B4CEF6BB2396E1BB001FA2EF /* ContactCardViewVertical.swift in Sources */,
 				B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */,
@@ -346,6 +353,7 @@
 				B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */,
 				B4CEF6C12396F0F0001FA2EF /* GroupInviteView.swift in Sources */,
 				B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */,
+				B4466C062399C86C001E6D6D /* BigLongButtonView.swift in Sources */,
 				B4C9ED9F238DBAD700A2C7DC /* ContentView.swift in Sources */,
 				F60291B02399BAE300AB8A3B /* FriendGroupCard.swift in Sources */,
 				F60291B22399BE6500AB8A3B /* CreateFriendGroupForm.swift in Sources */,
