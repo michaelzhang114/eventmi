@@ -15,7 +15,7 @@ struct CreateEventForm: View {
         VStack {
             Text("Create Event")
                 .font(.title)
-            TextField("Group name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("Event name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)

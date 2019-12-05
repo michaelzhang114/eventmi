@@ -17,7 +17,7 @@ struct LoginPage: View {
             Image("eventmi-logo")
             .resizable()
             .shadow(radius: 10)
-            .frame(width: 300.0, height:240)
+            .frame(width: 310.0, height:240)
             
             VStack {
                 TextField("Phone Number", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
