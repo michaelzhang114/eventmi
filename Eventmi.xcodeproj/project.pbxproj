@@ -72,7 +72,7 @@
 		F60291A323997BD600AB8A3B /* GroupHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomePage.swift; sourceTree = "<group>"; };
 		F60291A72399B28700AB8A3B /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		F60291A92399B5C400AB8A3B /* FriendsGroupIndexEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsGroupIndexEmpty.swift; sourceTree = "<group>"; };
-		F60291AB2399B8C300AB8A3B /* FriendsGroupIndexOneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsGroupIndexOneGroup.swift; sourceTree = "<group>"; };
+		F60291AB2399B8C300AB8A3B /* FriendsGroupIndexOneGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FriendsGroupIndexOneGroup.swift; sourceTree = "<group>"; tabWidth = 4; };
 		F60291AD2399B95800AB8A3B /* SortFilterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFilterBarView.swift; sourceTree = "<group>"; };
 		F60291AF2399BAE300AB8A3B /* FriendGroupCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendGroupCard.swift; sourceTree = "<group>"; };
 		F60291B12399BE6500AB8A3B /* CreateFriendGroupForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateFriendGroupForm.swift; sourceTree = "<group>"; };
