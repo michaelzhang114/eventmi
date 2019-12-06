@@ -53,64 +53,6 @@ struct GroupHomePage: View {
     }
 }
 
-struct GroupMember: View {
-    @Binding var groupMemberName: String
-    
-    var body: some View {
-        VStack {
-           Image("users-icon")
-               .resizable()
-               .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
-               .shadow(radius: 10)
-               .frame(width: 50.0, height:50.0)
-           Text(groupMemberName)
-               .font(.subheadline)
-       }
-    }
-    
-}
-
-struct UpcomingEventCard: View {
-    @State var member2 = "Nnamdi"
-    @State var member3 = "Fatima"
-    
-    @Binding var upcomingEventDateTime: String
-    @Binding var upcomingEventName: String
-    @Binding var upcomingEventLocation: String
-    
-    var body: some View {
-        
-        HStack {
-            // event picture
-            Image("users-icon")
-            .resizable()
-            .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
-            .shadow(radius: 10)
-            .frame(width: 50.0, height:50.0)
-            
-            VStack {
-                // date and time
-                Text(upcomingEventDateTime)
-                // event name
-                Text(upcomingEventName)
-                // location
-                Text(upcomingEventLocation)
-            }
-            
-            VStack {
-                HStack {
-                    GroupMember(groupMemberName: $member2)
-                    GroupMember(groupMemberName: $member3)
-                }
-                Text(member2 + " and " + member3 + " are going")
-            }
-        }
-        
-    }
-    
-    
-}
-
 struct QuickEvent: View {
     @Binding var quickEventName: String
     
