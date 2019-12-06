@@ -13,17 +13,28 @@ struct CreateFriendGroupForm: View {
 
     var body: some View {
         VStack {
+            
             Text("Create Group")
-                .font(.title)
             TextField("Group name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding()
-
-            
             FriendInviteView()
-
+            Text("Contacts List")
+            TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            .padding()
+            .background(lightGreyColor)
+            .cornerRadius(5.0)
+            .padding()
+            
+            ContactCardViewHorizontal()
+            ContactCardViewHorizontal()
+            ContactCardViewHorizontal()
+            
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Text("Create Friend Group")
+            }
         }
     }
 }

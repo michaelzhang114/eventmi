@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContactCardView: View {
+struct ContactCardViewHorizontal: View {
     var body: some View {
         HStack {
             Image("user-icon")
@@ -24,8 +24,8 @@ struct ContactCardView: View {
     }
 }
 
-struct ContactCardView_Previews: PreviewProvider {
+struct ContactCardViewHorizontal_Previews: PreviewProvider {
     static var previews: some View {
-        ContactCardView()
+        ContactCardViewHorizontal()
     }
 }
