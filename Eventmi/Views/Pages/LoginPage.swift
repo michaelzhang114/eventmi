@@ -10,9 +10,8 @@ import SwiftUI
 
 struct LoginPage: View {
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-    
+    @State var btn = "Log in"
     var body: some View {
-        
         VStack {
             Image("eventmi-logo")
             .resizable()
@@ -32,9 +31,7 @@ struct LoginPage: View {
                 .cornerRadius(5.0)
                 .padding()
                 
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Text("Log In")
-                }
+                BigLongButtonView(name: $btn)
             }
         }
         
