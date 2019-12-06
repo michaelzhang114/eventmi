@@ -20,6 +20,7 @@ struct FriendsGroupIndexEmpty: View {
             Text("Create Friend Group")
             }
         }
+        .frame(width: 350.0)
         
     }
 }

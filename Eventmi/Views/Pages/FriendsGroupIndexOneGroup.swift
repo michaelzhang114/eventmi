@@ -19,12 +19,14 @@ struct FriendsGroupIndexOneGroup: View {
             SortFilterBarView()
             
             FriendGroupCard(groupName: $name1, groupMembers: $members1, numMembers: $numMembers1)
+                .frame(width: 340.0)
             
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
             Text("Create Friend Group")
             }
             
         }
+        .frame(width: 350.0)
         
     }
 }

@@ -28,6 +28,7 @@ struct FriendGroupCard: View {
                 Text(numMembers)
             }
         }
+        .frame(width: 340.0)
     }
 }
 

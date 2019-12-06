@@ -9,8 +9,62 @@
 import SwiftUI
 
 struct ProfilePage: View {
+    
+    // pending invite #1
+    @State var imgName = "icecream"
+    @State var dateTime = "Fri, Nov 8th; 6pm"
+    @State var eventName = "Ice Cream Night"
+    @State var loc = "Parlour"
+    
+    // pending invite #2
+    @State var imgName2 = "burger"
+    @State var dateTime2 = "7pm tomorrow"
+    @State var eventName2 = "Dinner"
+    @State var loc2 = "The Loop"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment: .leading){
+            Text("Profile")
+            .font(.title)
+            
+            HStack {
+                VStack {
+                    Text("2")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.purple)
+                    Text("Events Hosted")
+                        .font(.subheadline)
+                }
+                VStack {
+                    Text("8")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.purple)
+                    Text("Events Attendees")
+                        .font(.subheadline)
+                }
+                VStack {
+                    Text("1")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.purple)
+                    Text("Friend Group")
+                        .font(.subheadline)
+                }
+                
+            }
+            
+            Text("Pending Invitations")
+                .font(.title)
+                
+            InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
+            
+            InvitationView(imgName: $imgName2, dateTime: $dateTime2, eventName: $eventName2, loc: $loc2)
+            
+            Text("Upcoming Events")
+                .font(.title)
+        }
     }
 }
 

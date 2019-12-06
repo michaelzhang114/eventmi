@@ -10,10 +10,10 @@ import SwiftUI
 
 struct InvitationView: View {
     
-    @State var imgName = "icecream"
-    @State var dateTime = "Fri, Nov 8th; 6pm"
-    @State var eventName = "Ice Cream Night"
-    @State var loc = "Parlour"
+    @Binding var imgName: String
+    @Binding var dateTime: String
+    @Binding var eventName: String
+    @Binding var loc: String
     @State var btnName = "Respond"
     
     var body: some View {
@@ -41,7 +41,13 @@ struct InvitationView: View {
 }
 
 struct InvitationView_Previews: PreviewProvider {
+    
+    @State static var imgName = "icecream"
+    @State static var dateTime = "6pm Fri, Nov 8th"
+    @State static var eventName = "Ice Cream Night"
+    @State static var loc = "Parlour"
+    
     static var previews: some View {
-        InvitationView()
+        InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
     }
 }
