@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BigLongButtonView: View {
     @Binding var name: String
-    // TODO: make this button big
+    
     var body: some View {
         Button(action: {
         }){
