@@ -41,7 +41,7 @@ struct CreateQuickEventForm: View {
             Text(groupName)
                 .font(.largeTitle)
                 .foregroundColor(Color.purple)
-            Text(location)
+            Text("@" + location)
                 .font(.largeTitle)
                 .foregroundColor(Color.purple)
             BigLongButtonView(name: $buttonName)
