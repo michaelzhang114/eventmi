@@ -36,6 +36,8 @@
 		F60291B42399C10200AB8A3B /* FriendInviteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60291B32399C10200AB8A3B /* FriendInviteView.swift */; };
 		F6390E88239AE16A000C9C52 /* UpcomingEventCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6390E87239AE16A000C9C52 /* UpcomingEventCard.swift */; };
 		F6390E8A239AE21E000C9C52 /* GroupMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6390E89239AE21E000C9C52 /* GroupMemberView.swift */; };
+		F67BC937239C5EA400A99C4A /* BubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67BC936239C5EA400A99C4A /* BubblesView.swift */; };
+		F67BC939239C5F1700A99C4A /* QuickEventBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67BC938239C5F1700A99C4A /* QuickEventBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F60291B32399C10200AB8A3B /* FriendInviteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendInviteView.swift; sourceTree = "<group>"; };
 		F6390E87239AE16A000C9C52 /* UpcomingEventCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingEventCard.swift; sourceTree = "<group>"; };
 		F6390E89239AE21E000C9C52 /* GroupMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberView.swift; sourceTree = "<group>"; };
+		F67BC936239C5EA400A99C4A /* BubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesView.swift; sourceTree = "<group>"; };
+		F67BC938239C5F1700A99C4A /* QuickEventBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickEventBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +208,8 @@
 				B49630E5239AE7220089B763 /* LittleButton.swift */,
 				F6390E87239AE16A000C9C52 /* UpcomingEventCard.swift */,
 				F6390E89239AE21E000C9C52 /* GroupMemberView.swift */,
+				F67BC936239C5EA400A99C4A /* BubblesView.swift */,
+				F67BC938239C5F1700A99C4A /* QuickEventBubble.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -371,6 +377,8 @@
 				B4CEF6B92396E08D001FA2EF /* CreateEventForm.swift in Sources */,
 				B4CEF6C12396F0F0001FA2EF /* GroupInviteView.swift in Sources */,
 				F6390E8A239AE21E000C9C52 /* GroupMemberView.swift in Sources */,
+				F67BC937239C5EA400A99C4A /* BubblesView.swift in Sources */,
+				F67BC939239C5F1700A99C4A /* QuickEventBubble.swift in Sources */,
 				B4CEF6BD2396EC3A001FA2EF /* QuickAddView.swift in Sources */,
 				F6390E88239AE16A000C9C52 /* UpcomingEventCard.swift in Sources */,
 				B4466C062399C86C001E6D6D /* BigLongButtonView.swift in Sources */,

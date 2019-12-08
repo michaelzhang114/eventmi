@@ -20,27 +20,28 @@ struct UpcomingEventCard: View {
     var body: some View {
         HStack {
             // event picture
-            Image("users-icon")
+            Image("icecream")
             .resizable()
-            .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
+            .aspectRatio(CGSize(width:1.5, height:1.0), contentMode: .fit)
             .shadow(radius: 10)
-            .frame(width: 50.0, height:50.0)
+            .frame(width: 110)
             
-            VStack {
-                // date and time
+            VStack (alignment: .leading) {
                 Text(upcomingEventDateTime)
-                // event name
+                    .foregroundColor(Color.purple)
                 Text(upcomingEventName)
-                // location
+                    .fontWeight(.semibold)
                 Text(upcomingEventLocation)
+                    .font(.footnote)
             }
             
-            VStack {
+            VStack (alignment: .center){
                 HStack {
                     GroupMember(groupMemberName: $member2)
                     GroupMember(groupMemberName: $member3)
                 }
                 Text(member2 + " and " + member3 + " are going")
+                .font(.footnote)
             }
         }
     }

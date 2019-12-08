@@ -23,6 +23,8 @@ struct GroupHomePage: View {
     @State var eventName1 = "Boba"
     @State var eventLoc1 = "1100 Pace Street"
     
+    @State var size1 = CGFloat(100)
+    @State var size2 = CGFloat(50)
     
     var body: some View {
         
@@ -31,8 +33,7 @@ struct GroupHomePage: View {
             Text("Groups")
             
             // bubbles
-            QuickEvent(quickEventName: $qeName1)
-            QuickEvent(quickEventName: $qeName2)
+            BubblesView()
             
             // label for group members
             Text("Members")
@@ -50,34 +51,9 @@ struct GroupHomePage: View {
             UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
             
         }
+        .frame(width: 350.0)
     }
 }
-
-struct QuickEvent: View {
-    @Binding var quickEventName: String
-    
-    var body: some View {
-        Arc(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
-        .fill(Color.purple)
-        .frame(width: 100, height: 100)
-        .overlay(
-        Text(quickEventName))
-    }
-}
-
-struct Arc: Shape {
-    var startAngle: Angle
-    var endAngle: Angle
-    var clockwise: Bool
-
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.width / 2, startAngle: startAngle, endAngle: endAngle, clockwise: clockwise)
-        return path
-    }
-}
-
-
 
 
 struct GroupHomePage_Previews: PreviewProvider {

@@ -30,8 +30,7 @@ struct InvitationView: View {
                 Text(eventName)
                     .fontWeight(.semibold)
                 Text(loc)
-                    .font(.footnote)
-                    
+                    .font(.footnote)    
             }
             LittleButton(name: $btnName)
         }
