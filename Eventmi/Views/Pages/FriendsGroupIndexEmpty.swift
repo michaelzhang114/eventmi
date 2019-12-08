@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FriendsGroupIndexEmpty: View {
+    @State var buttonName = "Create Friend Group"
     @Binding var data: DataController
     
     var body: some View {

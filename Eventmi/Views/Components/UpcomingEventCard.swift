@@ -44,6 +44,7 @@ struct UpcomingEventCard: View {
                 .font(.footnote)
             }
         }
+        .frame(width: 350.0)
     }
 }
 

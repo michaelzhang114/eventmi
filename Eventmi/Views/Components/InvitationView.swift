@@ -34,6 +34,7 @@ struct InvitationView: View {
             }
             LittleButton(name: $btnName)
         }
+        .frame(width: 350.0)
         
         
     }

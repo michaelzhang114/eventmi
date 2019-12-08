@@ -23,6 +23,7 @@ struct ContactCardViewHorizontal: View {
                 .font(.subheadline)
             InviteButtonView(memberName: $name1, membersList: $membersList)
         }
+        .frame(width: 350.0)
         
     }
 }

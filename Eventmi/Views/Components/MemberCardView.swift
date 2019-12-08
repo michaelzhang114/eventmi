@@ -24,6 +24,7 @@ struct MemberCardView: View {
             InviteButtonView(memberName: $memberName, membersList: $membersList)
 
         }
+        .frame(width: 350.0)
     }
 }
 

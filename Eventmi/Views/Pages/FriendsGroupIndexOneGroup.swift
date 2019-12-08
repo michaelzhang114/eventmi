@@ -13,19 +13,21 @@ struct FriendsGroupIndexOneGroup: View {
     @State var members1 = "Alethea, Fatima, Nnamdi"
     @State var numMembers1 = "3 People"
     
+    @State var buttonName = "Create Friend Group"
+    
     var body: some View {
         
         VStack {
+
             SortFilterBarView()
-            
+          
             FriendGroupCard(groupName: $name1, groupMembers: $members1, numMembers: $numMembers1)
                 .frame(width: 340.0)
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-            Text("Create Friend Group")
-            }
-            
+            Spacer()
+            BigLongButtonView(name: $buttonName)
+     
         }
+        .padding(.top, 50.0)
         .frame(width: 350.0)
         
     }
