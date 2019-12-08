@@ -22,6 +22,7 @@ struct GroupInviteView: View {
                 GroupCardView(groupName: $group3)
             }
         }
+        .frame(width: 350.0)
     }
 }
 

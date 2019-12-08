@@ -18,12 +18,16 @@ struct CreateEventForm: View {
             TextField("Event name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 .padding()
                 .background(lightGreyColor)
+                .frame(width: 350.0)
                 .cornerRadius(5.0)
                 .padding()
-            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("Date") })
+            Text("Date")
+            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("") })
+                .frame(width: 350.0)
             TextField("Location", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 .padding()
                 .background(lightGreyColor)
+                .frame(width: 350.0)
                 .cornerRadius(5.0)
                 .padding()
             GroupInviteView()
@@ -31,9 +35,11 @@ struct CreateEventForm: View {
                 .frame(width: 350, height: 100)
                 .padding()
                 .background(lightGreyColor)
+                .frame(width: 350.0)
                 .cornerRadius(5.0)
                 .padding()
         }
+        .padding(.top, 50.0)
 
     }
 }

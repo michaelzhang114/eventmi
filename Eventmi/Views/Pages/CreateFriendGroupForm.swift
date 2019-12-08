@@ -36,6 +36,7 @@ struct CreateFriendGroupForm: View {
             Text("Create Friend Group")
             }
         }
+        
     }
 }
 
