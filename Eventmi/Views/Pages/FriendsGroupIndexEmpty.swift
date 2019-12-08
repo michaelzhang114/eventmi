@@ -9,16 +9,16 @@
 import SwiftUI
 
 struct FriendsGroupIndexEmpty: View {
+    @State var buttonName = "Create Friend Group"
+    
     var body: some View {
         
         VStack {
             SortFilterBarView()
             
             Text("Oops, you have no friend groups yet!")
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-            Text("Create Friend Group")
-            }
+            Spacer()
+            BigLongButtonView(name: $buttonName)
         }
         .frame(width: 350.0)
         

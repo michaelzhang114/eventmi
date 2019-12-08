@@ -28,7 +28,7 @@ struct ProfilePage: View {
     
     
     var body: some View {
-        VStack (alignment: .leading){
+        VStack {
             Text("Profile")
             .font(.title)
             
@@ -59,11 +59,13 @@ struct ProfilePage: View {
                 }
                 
             }
+            .frame(width: 350.0)
             
             Text("Pending Invitations")
                 .font(.title)
                 
             InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
+            
             
             InvitationView(imgName: $imgName2, dateTime: $dateTime2, eventName: $eventName2, loc: $loc2)
             

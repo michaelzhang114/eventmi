@@ -20,6 +20,7 @@ struct ContactCardViewVertical: View {
                 .font(.subheadline)
             InviteButtonView()
         }
+        .frame(width: 350.0)
     }
 }
 

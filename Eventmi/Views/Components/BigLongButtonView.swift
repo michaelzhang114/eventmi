@@ -20,7 +20,7 @@ struct BigLongButtonView: View {
                 .foregroundColor(Color.white)
                 
         }
-        .frame(width: 400, height: 60)
+        .frame(width: 350.0, height: 60)
         .background(Color.purple)
     }
 }
