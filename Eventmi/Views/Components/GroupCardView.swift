@@ -19,8 +19,7 @@ struct GroupCardView: View {
                 .frame(width: 50.0, height:50.0)
             Text(groupName)
                 .font(.subheadline)
-            
-            InviteButtonView()
+            InviteGroupButtonView()
         }
     }
 }

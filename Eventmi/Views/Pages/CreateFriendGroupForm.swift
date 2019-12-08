@@ -9,30 +9,35 @@
 import SwiftUI
 
 struct CreateFriendGroupForm: View {
+    @Binding var data: DataController
+    
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
+    @State var groupName : String = ""
+    @State var members : [String] = []
+    
     var body: some View {
         VStack {
-            
             Text("Create Group")
-            TextField("Group name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("Group name", text: $groupName)
                 .padding()
                 .background(lightGreyColor)
                 .cornerRadius(5.0)
                 .padding()
-            FriendInviteView()
+            FriendInviteView(membersList: $members)
             Text("Contacts List")
-            TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-            .padding()
-            .background(lightGreyColor)
-            .cornerRadius(5.0)
-            .padding()
+            TextField("Search for friends", text: $groupName)
+                .padding()
+                .background(lightGreyColor)
+                .cornerRadius(5.0)
+                .padding()
             
-            ContactCardViewHorizontal()
-            ContactCardViewHorizontal()
-            ContactCardViewHorizontal()
+            ContactCardViewHorizontal(membersList: $members)
+            ContactCardViewHorizontal(membersList: $members)
+            ContactCardViewHorizontal(membersList: $members)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+            Button(action: {
+                self.data.addNewFriendGroup(groupName: self.groupName, members: self.members)}) {
             Text("Create Friend Group")
             }
         }
@@ -41,7 +46,8 @@ struct CreateFriendGroupForm: View {
 }
 
 struct CreateFriendGroupForm_Previews: PreviewProvider {
+    @State static var data: DataController = DataController()
     static var previews: some View {
-        CreateFriendGroupForm()
+        CreateFriendGroupForm(data: $data)
     }
 }

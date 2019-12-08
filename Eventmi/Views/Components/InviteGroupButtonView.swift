@@ -8,10 +8,8 @@
 
 import SwiftUI
 
-struct InviteButtonView: View {
+struct InviteGroupButtonView: View {
     @State private var hasClicked = false
-    @Binding var memberName: String
-    @Binding var membersList: [String]
     
     var body: some View {
         HStack {
@@ -26,7 +24,6 @@ struct InviteButtonView: View {
                         .foregroundColor(hasClicked ? Color.clear : Color.black)
                         .cornerRadius(40)
                         .onTapGesture { self.hasClicked.toggle()
-                            self.membersList.append(self.memberName)
                     }
                         .background(hasClicked ? Color.green : Color.clear)
                     
@@ -43,10 +40,8 @@ struct InviteButtonView: View {
     }
 }
 
-struct InviteButtonView_Previews: PreviewProvider {
-    @State static var memberName: String = "Alethea"
-    @State static var membersList: [String] = ["Alethea"]
+struct InviteGroupButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        InviteButtonView(memberName: $memberName, membersList: $membersList)
+        InviteGroupButtonView()
     }
 }

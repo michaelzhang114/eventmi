@@ -9,19 +9,18 @@
 import SwiftUI
 
 struct FriendsGroupIndexEmpty: View {
+    @Binding var data: DataController
+    
     var body: some View {
-        
-        VStack {
-            SortFilterBarView()
-            
-            Text("Oops, you have no friend groups yet!")
-            
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-            Text("Create Friend Group")
-            }
+        NavigationView{
+            VStack {
+                SortFilterBarView()
+                Text("Oops, you have no friend groups yet!")
+                NavigationLink(destination: CreateFriendGroupForm(data: $data)) {
+                    Text("Create Friend Group")
+                }
+            }.frame(width: 350.0)
         }
-        .frame(width: 350.0)
-        
     }
 }
 
@@ -45,7 +44,9 @@ struct SortFilterBar: View {
 }
 
 struct FriendsGroupIndexEmpty_Previews: PreviewProvider {
+    @State static var data: DataController = DataController()
+    
     static var previews: some View {
-        FriendsGroupIndexEmpty()
+        FriendsGroupIndexEmpty(data: $data)
     }
 }
