@@ -13,7 +13,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection){
-            Text("discover")
+            Text("Coming soon!")
                 .font(.largeTitle)
                 .tabItem {
                     VStack {
@@ -22,8 +22,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            Text("groups View")
-                .font(.title)
+            FriendsGroupIndexEmpty()
                 .tabItem {
                     VStack {
                         Image("second")
@@ -31,8 +30,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            Text("create event View")
-            .font(.title)
+            CreateEventForm()
             .tabItem {
                 VStack {
                     Image("second")
@@ -40,7 +38,7 @@ struct ContentView: View {
                 }
             }
             .tag(2)
-            Text("Memories View")
+            Text("Coming soon!")
             .font(.title)
             .tabItem {
                 VStack {
@@ -49,8 +47,7 @@ struct ContentView: View {
                 }
             }
             .tag(3)
-            Text("Profile View")
-            .font(.title)
+            ProfilePage()
             .tabItem {
                 VStack {
                     Image("second")
