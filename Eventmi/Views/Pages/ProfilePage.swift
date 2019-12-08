@@ -22,6 +22,11 @@ struct ProfilePage: View {
     @State var eventName2 = "Dinner"
     @State var loc2 = "The Loop"
     
+    @State var eventDateTime1 = "Sun, Oct 30 · 9:00pm"
+    @State var eventName1 = "Boba"
+    @State var eventLoc1 = "1100 Pace Street"
+    
+    
     var body: some View {
         VStack (alignment: .leading){
             Text("Profile")
@@ -64,6 +69,7 @@ struct ProfilePage: View {
             
             Text("Upcoming Events")
                 .font(.title)
+            UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
         }
     }
 }

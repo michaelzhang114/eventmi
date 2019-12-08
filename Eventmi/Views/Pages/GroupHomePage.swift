@@ -46,8 +46,7 @@ struct GroupHomePage: View {
             }
             
             // label for upcoming events
-            Text("Upcoming Events")
-            
+            Text("Upcoming Events")   
             UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
             
         }
