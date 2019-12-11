@@ -42,7 +42,17 @@ struct CreateFriendGroupForm: View {
             ContactCardViewHorizontal(name: $name2)
             ContactCardViewHorizontal(name: $name3)
 
-            BigLongButtonView(name: $btn, groupName: $groupName)
+            Button(action: {
+                self.data.createNewFriendGroup(groupName: self.groupName)
+            }){
+                Text(btn)
+                    .font(.title)
+                    .padding(10)
+                    .foregroundColor(Color.white)
+                    
+            }
+            .frame(width: 350.0, height: 60)
+            .background(Color.purple)
         }
         
     }

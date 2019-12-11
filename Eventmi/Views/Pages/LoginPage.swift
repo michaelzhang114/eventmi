@@ -35,7 +35,16 @@ struct LoginPage: View {
             }
             
             VStack {
-                BigLongButtonView(name: $btn)
+                Button(action: {
+                }){
+                    Text(btn)
+                        .font(.title)
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        
+                }
+                .frame(width: 350.0, height: 60)
+                .background(Color.purple)
             }
         }
         

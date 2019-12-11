@@ -18,12 +18,22 @@ struct FriendsGroupIndexEmpty: View {
                 SortFilterBarView()
                 Text("Oops, you have no friend groups yet!")
                 NavigationLink(destination: CreateFriendGroupForm()) {
-                    Text("Create Friend Group")
+                    Button(action: {
+                    }){
+                        Text(buttonName)
+                            .font(.title)
+                            .padding(10)
+                            .foregroundColor(Color.white)
+                            
+                    }
+                    .frame(width: 350.0, height: 60)
+                    .background(Color.purple)
                 }
+            }
             }.frame(width: 350.0)
         }
-    }
 }
+
 
 struct SortFilterBar: View {
     
