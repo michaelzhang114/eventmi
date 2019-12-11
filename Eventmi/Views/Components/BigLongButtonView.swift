@@ -10,9 +10,12 @@ import SwiftUI
 
 struct BigLongButtonView: View {
     @Binding var name: String
+    @Binding var groupName: String
+    @EnvironmentObject var data : DataController
     
     var body: some View {
         Button(action: {
+            self.data.createNewFriendGroup(groupName: self.groupName)
         }){
             Text(name)
                 .font(.title)
@@ -27,7 +30,8 @@ struct BigLongButtonView: View {
 
 struct BigLongButtonView_Previews: PreviewProvider {
     @State static var name = "Create"
+    @State static var groupName = "HotPotSquad"
     static var previews: some View {
-        BigLongButtonView(name: $name)
+        BigLongButtonView(name: $name, groupName: $groupName)
     }
 }

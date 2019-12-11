@@ -9,8 +9,8 @@
 import Foundation
 
 class FriendGroup {
-    var groupName = "wingMAN"
-    var members = ["john", "nathan", "alethea"]
+    var groupName : String
+    var members : [String]
     
     init(groupName : String) {
         self.groupName = groupName

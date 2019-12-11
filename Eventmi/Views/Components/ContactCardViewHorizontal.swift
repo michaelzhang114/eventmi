@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct ContactCardViewHorizontal: View {
-    @Binding var membersList: [String]
-    @State var name1 = "John"
+    @Binding var name : String
     
     var body: some View {
         HStack {
@@ -19,9 +18,9 @@ struct ContactCardViewHorizontal: View {
                 .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
                 .shadow(radius: 10)
                 .frame(width: 50.0, height:50.0)
-            Text(name1)
+            Text(name)
                 .font(.subheadline)
-            InviteButtonView(memberName: $name1, membersList: $membersList)
+            InviteButtonView(memberName: $name)
         }
         .frame(width: 350.0)
         
@@ -29,8 +28,8 @@ struct ContactCardViewHorizontal: View {
 }
 
 struct ContactCardViewHorizontal_Previews: PreviewProvider {
-    @State static var membersList: [String] = ["Alethea"]
+    @State static var name = "John"
     static var previews: some View {
-        ContactCardViewHorizontal(membersList: $membersList)
+        ContactCardViewHorizontal(name: $name)
     }
 }

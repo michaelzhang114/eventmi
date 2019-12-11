@@ -10,7 +10,6 @@ import SwiftUI
 
 struct MemberCardView: View {
     @Binding var memberName: String
-    @Binding var membersList: [String]
     
     var body: some View {
         VStack {
@@ -21,7 +20,7 @@ struct MemberCardView: View {
                 .frame(width: 50.0, height:50.0)
             Text(memberName)
                 .font(.subheadline)
-            InviteButtonView(memberName: $memberName, membersList: $membersList)
+            InviteButtonView(memberName: $memberName)
 
         }
         .frame(width: 350.0)
@@ -30,8 +29,7 @@ struct MemberCardView: View {
 
 struct MemberCardView_Previews: PreviewProvider {
     @State static var memberName: String = "Alethea"
-    @State static var membersList: [String] = ["Alethea"]
     static var previews: some View {
-        MemberCardView(memberName: $memberName, membersList: $membersList)
+        MemberCardView(memberName: $memberName)
     }
 }
