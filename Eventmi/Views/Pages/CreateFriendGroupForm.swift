@@ -40,12 +40,12 @@ struct CreateFriendGroupForm: View {
             ContactCardViewHorizontal(membersList: $members)
             ContactCardViewHorizontal(membersList: $members)
             
-Button(action: {
+            Button(action: {
                 self.data.addNewFriendGroup(groupName: self.groupName, members: self.members)}) {
             Text("Create Friend Group")
             }
 
-            BigLongButtonView(name: $btn)
+            //BigLongButtonView(name: $btn)
         }
         
     }

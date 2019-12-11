@@ -11,8 +11,11 @@ import Foundation
 class DataController {
     var listOfFriendGroups: [FriendGroup]
     
+    var listOfEvents : [Event]
+    
     init() {
         listOfFriendGroups = []
+        listOfEvents = []
     }
     
     func addNewFriendGroup(groupName : String, members : [String]) {
@@ -21,6 +24,11 @@ class DataController {
         for s in members {
             fg.addMember(name: s)
         }
+    }
+    
+    func addNewEvent(e : String, dt : Date, loc : String, gr : [String], d : String) {
+        let ev = Event(e: e, dt: dt, loc: loc, gr: gr, d: d)
+        listOfEvents.append(ev)
     }
     
     
