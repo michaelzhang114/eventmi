@@ -18,7 +18,7 @@ struct ProfilePage: View {
     
     // pending invite #2
     @State var imgName2 = "burger"
-    @State var dateTime2 = "7pm tomorrow"
+    @State var dateTime2 = "Fri, Nov 20th; 8pm"
     @State var eventName2 = "Dinner"
     @State var loc2 = "The Loop"
     
@@ -31,11 +31,13 @@ struct ProfilePage: View {
         VStack {
             Text("Profile")
             .font(.title)
+            .padding(.top, -120)
+            
             
             HStack {
                 VStack {
                     Text("2")
-                        .font(.headline)
+                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.purple)
                     Text("Events Hosted")
@@ -43,7 +45,7 @@ struct ProfilePage: View {
                 }
                 VStack {
                     Text("8")
-                        .font(.headline)
+                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.purple)
                     Text("Events Attendees")
@@ -51,7 +53,7 @@ struct ProfilePage: View {
                 }
                 VStack {
                     Text("1")
-                        .font(.headline)
+                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.purple)
                     Text("Friend Group")
@@ -60,17 +62,19 @@ struct ProfilePage: View {
                 
             }
             .frame(width: 350.0)
+            .padding(.top, -60)
             
             Text("Pending Invitations")
                 .font(.title)
+                .padding(.top, 30)
                 
             InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
-            
             
             InvitationView(imgName: $imgName2, dateTime: $dateTime2, eventName: $eventName2, loc: $loc2)
             
             Text("Upcoming Events")
                 .font(.title)
+                .padding(.top, 30)
             UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
         }
     }

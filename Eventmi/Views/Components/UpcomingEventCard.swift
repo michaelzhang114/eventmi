@@ -24,7 +24,7 @@ struct UpcomingEventCard: View {
             .resizable()
             .aspectRatio(CGSize(width:1.5, height:1.0), contentMode: .fit)
             .shadow(radius: 10)
-            .frame(width: 110)
+            .frame(width: 80)
             
             VStack (alignment: .leading) {
                 Text(upcomingEventDateTime)
@@ -38,9 +38,12 @@ struct UpcomingEventCard: View {
             VStack (alignment: .center){
                 HStack {
                     GroupMember(groupMemberName: $member2)
+                        
                     GroupMember(groupMemberName: $member3)
+                        //.padding(.leading, 20)
                 }
-                Text(member2 + " and " + member3 + " are going")
+                //Text(member2 + " and " + member3 + " are going")
+                Text("are going")
                 .font(.footnote)
             }
         }

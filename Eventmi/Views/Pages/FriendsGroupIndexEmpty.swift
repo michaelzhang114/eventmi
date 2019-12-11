@@ -15,23 +15,28 @@ struct FriendsGroupIndexEmpty: View {
     var body: some View {
         NavigationView{
             VStack {
-                SortFilterBarView()
-                Text("Oops, you have no friend groups yet!")
-                NavigationLink(destination: CreateFriendGroupForm()) {
-                    Button(action: {
-                    }){
-                        Text(buttonName)
-                            .font(.title)
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            
+                Text("Friend Groups")
+                    .font(.title)
+                VStack {
+                    SortFilterBarView()
+                    Spacer()
+                    Text("Oops, you have no friend groups yet!")  
+                    Spacer()
+                    NavigationLink(destination: CreateFriendGroupForm()) {
+                        Button(action: {
+                        }){
+                            Text(buttonName)
+                                .font(.title)
+                                .padding(10)
+                                .foregroundColor(Color.white)
+                        }
+                        .frame(width: 350.0, height: 60)
+                        .background(Color.purple)
                     }
-                    .frame(width: 350.0, height: 60)
-                    .background(Color.purple)
                 }
-            }
-            }.frame(width: 350.0)
-        }
+            }.padding(.top, 50.0)
+        }.frame(width: 350.0)
+    }
 }
 
 

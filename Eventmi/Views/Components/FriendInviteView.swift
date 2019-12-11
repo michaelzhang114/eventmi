@@ -16,6 +16,7 @@ struct FriendInviteView: View {
     var body: some View {
         VStack {
             Text("Quick Add")
+            .fontWeight(.semibold)
             HStack {
                 MemberCardView(memberName: $name1)
                 MemberCardView(memberName: $name2)

@@ -21,8 +21,9 @@ struct CreateFriendGroupForm: View {
     @State var groupName : String = ""
     
     var body: some View {
-        VStack {
+        VStack (alignment: .center){
             Text("Create Group")
+                .font(.title)
             TextField("Group name", text: $groupName)
                 .padding()
                 .background(lightGreyColor)
@@ -31,6 +32,7 @@ struct CreateFriendGroupForm: View {
                 .padding()
             FriendInviteView()
             Text("Contacts List")
+            .fontWeight(.semibold)
             TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
             .padding()
             .background(lightGreyColor)
@@ -53,6 +55,7 @@ struct CreateFriendGroupForm: View {
             }
             .frame(width: 350.0, height: 60)
             .background(Color.purple)
+            .padding(.top, 20)
         }
         
     }

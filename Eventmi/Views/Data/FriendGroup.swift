@@ -14,6 +14,7 @@ class FriendGroup {
     
     init(groupName : String) {
         self.groupName = groupName
+        self.members = []
     }
     
     func addMember(name : String) {

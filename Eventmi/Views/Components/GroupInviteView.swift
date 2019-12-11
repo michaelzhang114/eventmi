@@ -9,13 +9,26 @@
 import SwiftUI
 
 struct GroupInviteView: View {
+    
+    @EnvironmentObject var data : DataController
+    
+    
+//    var allGroups : [String]
+        
     @State var group1 = "group 1 name"
     @State var group2 = "group 2 name"
     @State var group3 = "group 3 name"
     
+//    var ind = data.getAllFriendGroups()
+//
+    //self.data.addToCurrentFriendGroup(memberName: group1)
+    
+    
     var body: some View {
-        VStack {
+        
+        VStack (alignment: .center){
             Text("Who to invite?")
+                .fontWeight(.semibold)
             HStack {
                 GroupCardView(groupName: $group1)
                 GroupCardView(groupName: $group2)

@@ -13,6 +13,7 @@ class DataController: ObservableObject {
     @Published var listOfEvents: [Event]
     @Published var currentGroup: [String]
     
+    
     init() {
         listOfFriendGroups = []
         listOfEvents = []
@@ -41,6 +42,14 @@ class DataController: ObservableObject {
     func addNewEvent(e : String, dt : Date, loc : String, gr : [String], d : String) {
         let ev = Event(e: e, dt: dt, loc: loc, gr: gr, d: d)
         listOfEvents.append(ev)
+    }
+    
+    func getAllFriendGroups() -> [String] {
+        var out : [String] = []
+        for fg in listOfFriendGroups {
+            out.append(fg.groupName)
+        }
+        return out
     }
     
     
