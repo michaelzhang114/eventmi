@@ -10,13 +10,13 @@ import Foundation
 
 class DataController: ObservableObject {
     @Published var listOfFriendGroups: [FriendGroup]
+    @Published var listOfEvents: [Event]
     @Published var currentGroup: [String]
-    
-    var listOfEvents : [Event]
     
     init() {
         listOfFriendGroups = []
         listOfEvents = []
+        currentGroup = []
     }
     
     func addToCurrentFriendGroup(memberName: String){

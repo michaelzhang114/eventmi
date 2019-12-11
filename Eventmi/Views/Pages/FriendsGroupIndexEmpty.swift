@@ -10,14 +10,14 @@ import SwiftUI
 
 struct FriendsGroupIndexEmpty: View {
     @State var buttonName = "Create Friend Group"
-    @Binding var data: DataController
+    @EnvironmentObject var data : DataController
     
     var body: some View {
         NavigationView{
             VStack {
                 SortFilterBarView()
                 Text("Oops, you have no friend groups yet!")
-                NavigationLink(destination: CreateFriendGroupForm(data: $data)) {
+                NavigationLink(destination: CreateFriendGroupForm()) {
                     Text("Create Friend Group")
                 }
             }.frame(width: 350.0)
@@ -45,9 +45,7 @@ struct SortFilterBar: View {
 }
 
 struct FriendsGroupIndexEmpty_Previews: PreviewProvider {
-    @State static var data: DataController = DataController()
-    
     static var previews: some View {
-        FriendsGroupIndexEmpty(data: $data)
+        FriendsGroupIndexEmpty()
     }
 }

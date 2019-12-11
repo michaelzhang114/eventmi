@@ -10,8 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
-    
-    @State var dataController = DataController()
+    @EnvironmentObject var data : DataController
  
     var body: some View {
         TabView(selection: $selection){
@@ -24,7 +23,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-            FriendsGroupIndexEmpty(data: $dataController)
+            FriendsGroupIndexEmpty()
                 .tabItem {
                     VStack {
                         Image("second")
