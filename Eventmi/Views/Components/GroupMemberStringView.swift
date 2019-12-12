@@ -8,10 +8,10 @@
 
 import SwiftUI
 
-struct GroupMember: View {
+struct GroupMemberString: View {
     @EnvironmentObject var data: DataController
-    @Binding var indexEvent: Int
-    @Binding var index: Int
+    @Binding var groupIndex: Int
+    @Binding var memberIndex: Int
     
     var body: some View {
         VStack {
@@ -20,18 +20,18 @@ struct GroupMember: View {
                .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
                .shadow(radius: 10)
                .frame(width: 50.0, height:50.0)
-            Text(self.data.listOfEvents[index].groupsInvited[index])
+            Text(self.data.listOfFriendGroups[groupIndex].members[memberIndex])
             .font(.footnote)
        }
     }
 }
 
 
-struct GroupMemberView_Previews:
+struct GroupMemberStringView_Previews:
 PreviewProvider {
     @State static var tmp = 0
     @State static var tmp2 = 0
     static var previews: some View {
-        GroupMember(indexEvent: $tmp, index: $tmp2)
+        GroupMemberString(groupIndex: $tmp, memberIndex: $tmp2)
     }
 }

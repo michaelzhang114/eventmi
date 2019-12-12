@@ -21,6 +21,9 @@ struct GroupHomePage: View {
     @State var member2 = "Nnamdi"
     @State var member3 = "Fatima"
     
+    @State var index1 = 0
+    @State var index2 = 1
+    
     @State var eventDateTime1 = "Sun, Oct 30 · 9:00pm"
     @State var eventName1 = "Boba"
     @State var eventLoc1 = "1100 Pace Street"
@@ -60,7 +63,8 @@ struct GroupHomePage: View {
 
 
 struct GroupHomePage_Previews: PreviewProvider {
+    @State static var tmp1 = 0
     static var previews: some View {
-        GroupHomePage()
+        GroupHomePage(groupIndex: $tmp1)
     }
 }

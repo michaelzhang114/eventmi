@@ -21,43 +21,44 @@ struct CreateFriendGroupForm: View {
     @State var groupName : String = ""
     
     var body: some View {
-        VStack (alignment: .center){
-            Text("Create Group")
-                .font(.title)
-            TextField("Group name", text: $groupName)
+        ScrollView{
+            VStack (alignment: .center){
+                Text("Create Group")
+                    .font(.title)
+                TextField("Group name", text: $groupName)
+                    .padding()
+                    .background(lightGreyColor)
+                    .frame(width: 350.0)
+                    .cornerRadius(5.0)
+                    .padding()
+                FriendInviteView()
+                Text("Contacts List")
+                .fontWeight(.semibold)
+                TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
                 .padding()
                 .background(lightGreyColor)
                 .frame(width: 350.0)
                 .cornerRadius(5.0)
                 .padding()
-            FriendInviteView()
-            Text("Contacts List")
-            .fontWeight(.semibold)
-            TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-            .padding()
-            .background(lightGreyColor)
-            .frame(width: 350.0)
-            .cornerRadius(5.0)
-            .padding()
-            
-            ContactCardViewHorizontal(name: $name1)
-            ContactCardViewHorizontal(name: $name2)
-            ContactCardViewHorizontal(name: $name3)
+                
+                ContactCardViewHorizontal(name: $name1)
+                ContactCardViewHorizontal(name: $name2)
+                ContactCardViewHorizontal(name: $name3)
 
-            Button(action: {
-                self.data.createNewFriendGroup(gName: self.groupName)
-            }){
-                Text(btn)
-                    .font(.title)
-                    .padding(10)
-                    .foregroundColor(Color.white)
-                    
+                Button(action: {
+                    self.data.createNewFriendGroup(gName: self.groupName)
+                }){
+                    Text(btn)
+                        .font(.title)
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        
+                }
+                .frame(width: 350.0, height: 60)
+                .background(Color.purple)
+                .padding(.top, 20)
             }
-            .frame(width: 350.0, height: 60)
-            .background(Color.purple)
-            .padding(.top, 20)
         }
-        
     }
 }
 

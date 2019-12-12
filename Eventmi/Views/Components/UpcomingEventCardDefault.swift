@@ -8,23 +8,14 @@
 
 import SwiftUI
 
-struct UpcomingEventCard: View {
-    
-    @EnvironmentObject var data: DataController
+struct UpcomingEventCardDefault: View {
     
     @State var member2 = "Nnamdi"
     @State var member3 = "Fatima"
     
-    @Binding var index: Int
-    
-    @State var index0 = 0
-    @State var index1 = 1
-    
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH E, d MMM"
-        return formatter
-    }
+    @Binding var upcomingEventDateTime: String
+    @Binding var upcomingEventName: String
+    @Binding var upcomingEventLocation: String
     
     var body: some View {
         HStack {
@@ -36,18 +27,18 @@ struct UpcomingEventCard: View {
             .frame(width: 80)
             
             VStack (alignment: .leading) {
-                Text(dateFormatter.string(from: self.data.listOfEvents[index].dateTime))
+                Text(upcomingEventDateTime)
                     .foregroundColor(Color.purple)
-                Text(self.data.listOfEvents[index].eventName)
+                Text(upcomingEventName)
                     .fontWeight(.semibold)
-                Text(self.data.listOfEvents[index].location)
+                Text(upcomingEventLocation)
                     .font(.footnote)
             }
             
             VStack (alignment: .center){
                 HStack {
-                    GroupMember(indexEvent: $index, index: $index0)
-                    GroupMember(indexEvent: $index, index: $index1)
+                    GroupMemberDefault(groupName: $member2)
+                    GroupMemberDefault(groupName: $member3)
                         //.padding(.leading, 20)
                 }
                 //Text(member2 + " and " + member3 + " are going")
@@ -59,10 +50,12 @@ struct UpcomingEventCard: View {
     }
 }
 
-struct UpcomingEventCard_Previews: PreviewProvider {
-    @State static var tmp1 = 0
+struct UpcomingEventCardDefault_Previews: PreviewProvider {
+    @State static var tmp1 = "xx"
+    @State static var tmp2 = "xx"
+    @State static var tmp3 = "xx"
     
     static var previews: some View {
-        UpcomingEventCard(index: $tmp1)
+        UpcomingEventCardDefault(upcomingEventDateTime: $tmp1, upcomingEventName: $tmp2, upcomingEventLocation: $tmp3)
     }
 }
