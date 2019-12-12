@@ -31,7 +31,7 @@ struct ContentView: View {
                     }
                 }
                 .tag(1)
-            CreateEventForm()
+            CreateEventForm(selection: self.$selection)
             .tabItem {
                 VStack {
                     Image("create")

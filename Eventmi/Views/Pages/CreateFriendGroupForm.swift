@@ -60,7 +60,7 @@ struct CreateFriendGroupForm: View {
                 .frame(width: 350.0, height: 60)
                 .background(Color.purple)
                 .padding(.top, 20)
-            }
+            }.padding(.top, -10.0)
         }
     }
 }

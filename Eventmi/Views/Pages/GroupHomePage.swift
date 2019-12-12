@@ -24,6 +24,7 @@ struct GroupHomePage: View {
     
     @State var index1 = 0
     @State var index2 = 1
+    @State var index3 = 2
     
     @State var eventDateTime1 = "Sun, Oct 30 · 9:00pm"
     @State var eventName1 = "Boba"
@@ -34,32 +35,37 @@ struct GroupHomePage: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                // label
-                Text("Groups")
-                .font(.title)
-                // bubbles
-                BubblesView().padding(.bottom, 30)
-                
-                // label for group members
-                Text("Members")
-                    .fontWeight(.semibold)
-                // group members
-                HStack {
-                    GroupMemberString(groupIndex: $groupIndex, memberIndex: $index1)
-                    GroupMemberString(groupIndex: $groupIndex, memberIndex: $index2)
-                }.padding(.bottom, 30)
-                
-                // label for upcoming events
-                Text("Upcoming Events")
-                    .fontWeight(.semibold)
-                UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
-                if(self.data.listOfEvents.count > 0){
-                    UpcomingEventCard(index: $index1)
-                }
-                
-            }.frame(width: 350.0)
-        }
+            ScrollView {
+                VStack {
+                    // label
+                    Text("Groups")
+                    .font(.title)
+                    // bubbles
+                    BubblesView().padding(.bottom, 30)
+                    
+                    // label for group members
+                    Text("Members")
+                        .fontWeight(.semibold)
+                    // group members
+                    HStack {
+                        GroupMemberString(groupIndex: $groupIndex, memberIndex: $index1)
+                        GroupMemberString(groupIndex: $groupIndex, memberIndex: $index2)
+                        if(self.data.listOfFriendGroups[groupIndex].members.count > 2){
+                            GroupMemberString(groupIndex: $groupIndex, memberIndex: $index3)
+                        }
+                    }.padding(.bottom, 30)
+                    
+                    // label for upcoming events
+                    Text("Upcoming Events")
+                        .fontWeight(.semibold)
+                    UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
+                    if(self.data.listOfEvents.count > 0){
+                        UpcomingEventCard(index: $index1)
+                    }
+                    
+                }.frame(width: 350.0)
+            }
+        }.padding(.top, -20.0)
         
     }
 }

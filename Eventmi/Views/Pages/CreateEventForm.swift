@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CreateEventForm: View {
     @EnvironmentObject var data : DataController
+    @Binding var selection: Int
 
     @State private var eventName : String = ""
     @State private var dateTime : Date = Date()
@@ -50,6 +51,7 @@ struct CreateEventForm: View {
                     
                 Button(action: {
                     self.data.addNewEvent(e: self.eventName, dt: self.dateTime, loc: self.location, d: self.description)
+                    self.selection = 1
                 }){
                     Text(btn)
                         .font(.title)
@@ -60,13 +62,14 @@ struct CreateEventForm: View {
                 .frame(width: 350.0, height: 60)
                 .background(Color.purple)
             }
-            .padding(.top, 50.0)
+            
         }
     }
 }
 
 struct CreateEventForm_Previews: PreviewProvider {
+    @State static var tmp = 2
     static var previews: some View {
-        CreateEventForm()
+        CreateEventForm(selection: $tmp)
     }
 }

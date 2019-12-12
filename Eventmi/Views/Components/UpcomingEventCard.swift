@@ -47,7 +47,9 @@ struct UpcomingEventCard: View {
             VStack (alignment: .center){
                 HStack {
                     GroupMember(indexEvent: $index, index: $index0)
-                    GroupMember(indexEvent: $index, index: $index1)
+                    if(self.data.listOfEvents[index].groupsInvited.count > 1){
+                        GroupMember(indexEvent: $index, index: $index1)
+                    }
                         //.padding(.leading, 20)
                 }
                 //Text(member2 + " and " + member3 + " are going")

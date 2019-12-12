@@ -29,7 +29,7 @@ struct FriendGroupCard: View {
             VStack {
                 Text(self.data.listOfFriendGroups[index].groupName)
                 Text(self.data.listOfFriendGroups[index].members.prefix(3).joined(separator: ", "))
-                Text(String(self.data.listOfFriendGroups[index].members.count) + "People")
+                Text(String(self.data.listOfFriendGroups[index].members.count) + " People")
             }
         }
         .frame(width: 340.0)

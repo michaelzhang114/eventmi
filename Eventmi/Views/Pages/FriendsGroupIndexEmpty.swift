@@ -53,7 +53,7 @@ struct FriendsGroupIndexEmpty: View {
                         .background(Color.purple)
                     }
                 }
-            }.padding(.top, 50.0)
+            }.padding(.top, -10.0)
         }.frame(width: 350.0)
     }
 }

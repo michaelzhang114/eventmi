@@ -19,6 +19,12 @@ struct InviteGroupButtonView: View {
         HStack {
             Button(action: {
                 self.hasClicked.toggle()
+                if self.hasClicked {
+                    self.data.addFriendGroupToCurrentEvent(groupIndex: self.index)
+                }
+                else {
+                    self.data.removeFriendGroupToCurrentEvent(groupIndex: self.index)
+                }
             }){
                 ZStack {
                     Text("Invite")
@@ -27,16 +33,6 @@ struct InviteGroupButtonView: View {
                         .padding()
                         .foregroundColor(hasClicked ? Color.clear : Color.black)
                         .cornerRadius(40)
-                        .onTapGesture {
-                            self.hasClicked.toggle()
-                            if self.hasClicked {
-                                self.data.addFriendGroupToCurrentEvent(groupIndex: self.index)
-                            }
-                            else {
-                                self.data.removeFriendGroupToCurrentEvent(groupIndex: self.index)
-                            }
-                            
-                        }
                         .background(hasClicked ? Color.green : Color.clear)
                     
                     Text("Sent")
