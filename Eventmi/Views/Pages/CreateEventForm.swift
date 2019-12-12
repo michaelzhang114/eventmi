@@ -10,10 +10,11 @@ import SwiftUI
 
 struct CreateEventForm: View {
     @EnvironmentObject var data : DataController
-//
-//    @State var eventName : String
-//    @State var dateTime : Date
-//    @State var location : String
+
+    @State private var eventName : String = ""
+    @State private var dateTime : Date = Date()
+    @State private var location : String = ""
+    @State private var description : String = ""
     
     @State var btn = "Create"
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
@@ -22,7 +23,7 @@ struct CreateEventForm: View {
         VStack (alignment: .center){
             Text("Create Event")
                 .font(.title)
-            TextField("Event name", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("Event name", text: $eventName)
                 .padding()
                 .background(lightGreyColor)
                 .frame(width: 350.0)
@@ -30,16 +31,16 @@ struct CreateEventForm: View {
                 .padding()
             Text("Date")
                 .fontWeight(.semibold)
-            DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("") })
+            DatePicker(selection: $dateTime, label: { Text("") })
                 .frame(width: 350.0)
-            TextField("Location", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("Location", text: $location)
                 .padding()
                 .background(lightGreyColor)
                 .frame(width: 350.0)
                 .cornerRadius(5.0)
                 .padding()
             GroupInviteView()
-            TextField("Add a description for your event?", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+            TextField("Add a description for your event?", text: $description)
                 .padding()
                 .background(lightGreyColor)
                 .frame(width: 350.0)
@@ -47,6 +48,7 @@ struct CreateEventForm: View {
                 .padding()
                 
             Button(action: {
+                self.data.addNewEvent(e: self.eventName, dt: self.dateTime, loc: self.location, d: self.description)
             }){
                 Text(btn)
                     .font(.title)

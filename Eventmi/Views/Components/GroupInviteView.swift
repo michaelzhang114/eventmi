@@ -11,17 +11,18 @@ import SwiftUI
 struct GroupInviteView: View {
     
     @EnvironmentObject var data : DataController
-    
-    
 //    var allGroups : [String]
-        
-    @State var group1 = "group 1 name"
-    @State var group2 = "group 2 name"
-    @State var group3 = "group 3 name"
     
+    
+    @State var group1 = 0
+    @State var group2 = 1
+    @State var group3 = 2
+    
+ //   var listOfGroups : [String] = ["a", "b"]
 //    var ind = data.getAllFriendGroups()
 //
     //self.data.addToCurrentFriendGroup(memberName: group1)
+    
     
     
     var body: some View {
@@ -30,9 +31,23 @@ struct GroupInviteView: View {
             Text("Who to invite?")
                 .fontWeight(.semibold)
             HStack {
-                GroupCardView(groupName: $group1)
-                GroupCardView(groupName: $group2)
-                GroupCardView(groupName: $group3)
+                if (self.data.listOfFriendGroups.isEmpty) {
+                    Text("There are no friend groups")
+                }
+                else if (self.data.listOfFriendGroups.count == 1) {
+                    GroupCardView(index:
+                        $group1)
+                }
+                else if (self.data.listOfFriendGroups.count == 2) {
+                    GroupCardView(index: $group1)
+                    GroupCardView(index:
+                        $group2)
+                }
+                else {
+                    GroupCardView(index: $group1)
+                    GroupCardView(index: $group2)
+                    GroupCardView(index: $group3)
+                }
             }
         }
         .frame(width: 350.0)

@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct GroupCardView: View {
-    @Binding var groupName: String
+    
+    @EnvironmentObject var data: DataController
+    @Binding var index: Int
     var body: some View {
         VStack {
             Image("users-icon")
@@ -17,16 +19,16 @@ struct GroupCardView: View {
                 .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
                 .shadow(radius: 10)
                 .frame(width: 50.0, height:50.0)
-            Text(groupName)
+            Text(self.data.listOfFriendGroups[index].groupName)
                 .font(.subheadline)
-            InviteGroupButtonView()
+            InviteGroupButtonView(index: $index)
         }
     }
 }
 
 struct GroupCardView_Previews: PreviewProvider {
-    @State static var tmp = "some group name"
+    @State static var tmp = 0
     static var previews: some View {
-        GroupCardView(groupName: $tmp)
+        GroupCardView(index: $tmp)
     }
 }
