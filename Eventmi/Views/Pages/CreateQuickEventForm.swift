@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CreateQuickEventForm: View {
-    
+    @EnvironmentObject var data : DataController
     @Binding var eventName: String
     @State var buttonName = "Create"
     
@@ -42,12 +42,17 @@ struct CreateQuickEventForm: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.purple)
-            Text("@" + "location")
+            Text("@" + "West Campus")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.purple)
             //BigLongButtonView(name: $buttonName)
             Button(action: {
+                
+                self.data.addNewEvent(e: self.eventName, dt: Date(), loc: "West Campus", d: "let's have fun")
+                //self.selection = 1
+                
+                
             }){
                 Text(buttonName)
                     .font(.title)
