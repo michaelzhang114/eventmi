@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		653E35C623A2C91400565028 /* UpcomingEventCardDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E35C523A2C91400565028 /* UpcomingEventCardDefault.swift */; };
 		653E35C823A2D32800565028 /* GroupMemberStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E35C723A2D32800565028 /* GroupMemberStringView.swift */; };
-		B43BA1B223A1778B005974AA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43BA1B123A1778B005974AA /* Event.swift */; };
+		653E35CA23A2DEDA00565028 /* GroupMemberDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653E35C923A2DEDA00565028 /* GroupMemberDefaultView.swift */; };
 		B4466C042399C4BB001E6D6D /* CreateQuickEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */; };
 		B4466C062399C86C001E6D6D /* BigLongButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C052399C86C001E6D6D /* BigLongButtonView.swift */; };
 		B45BD69D239C8FA400F699D1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD69C239C8FA400F699D1 /* DataController.swift */; };
@@ -64,7 +64,7 @@
 /* Begin PBXFileReference section */
 		653E35C523A2C91400565028 /* UpcomingEventCardDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventCardDefault.swift; sourceTree = "<group>"; };
 		653E35C723A2D32800565028 /* GroupMemberStringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMemberStringView.swift; sourceTree = "<group>"; };
-		B43BA1B123A1778B005974AA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		653E35C923A2DEDA00565028 /* GroupMemberDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMemberDefaultView.swift; sourceTree = "<group>"; };
 		B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuickEventForm.swift; sourceTree = "<group>"; };
 		B4466C052399C86C001E6D6D /* BigLongButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLongButtonView.swift; sourceTree = "<group>"; };
 		B45BD69C239C8FA400F699D1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -226,6 +226,7 @@
 				F6390E87239AE16A000C9C52 /* UpcomingEventCard.swift */,
 				653E35C523A2C91400565028 /* UpcomingEventCardDefault.swift */,
 				F6390E89239AE21E000C9C52 /* GroupMemberView.swift */,
+				653E35C923A2DEDA00565028 /* GroupMemberDefaultView.swift */,
 				653E35C723A2D32800565028 /* GroupMemberStringView.swift */,
 				F67BC936239C5EA400A99C4A /* BubblesView.swift */,
 				F67BC938239C5F1700A99C4A /* QuickEventBubble.swift */,
@@ -390,6 +391,7 @@
 				F60291A423997BD600AB8A3B /* GroupHomePage.swift in Sources */,
 				B4C9ED9D238DBAD700A2C7DC /* SceneDelegate.swift in Sources */,
 				B45BD69D239C8FA400F699D1 /* DataController.swift in Sources */,
+				653E35CA23A2DEDA00565028 /* GroupMemberDefaultView.swift in Sources */,
 				B49630E4239AE3240089B763 /* InvitationView.swift in Sources */,
 				F60291AA2399B5C400AB8A3B /* FriendsGroupIndexEmpty.swift in Sources */,
 				F60291AC2399B8C300AB8A3B /* FriendsGroupIndexOneGroup.swift in Sources */,
@@ -563,6 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Eventmi/Preview Content\"";
+				DEVELOPMENT_TEAM = B3K8B5B7FQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Eventmi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,6 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Eventmi/Preview Content\"";
+				DEVELOPMENT_TEAM = B3K8B5B7FQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Eventmi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

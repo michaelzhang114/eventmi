@@ -28,54 +28,56 @@ struct ProfilePage: View {
     
     
     var body: some View {
-        VStack {
-            Text("Profile")
-            .font(.title)
-            .padding(.top, -120)
-            
-            
-            HStack {
-                VStack {
-                    Text("2")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.purple)
-                    Text("Events Hosted")
-                        .font(.subheadline)
-                }
-                VStack {
-                    Text("8")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.purple)
-                    Text("Events Attendees")
-                        .font(.subheadline)
-                }
-                VStack {
-                    Text("1")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.purple)
-                    Text("Friend Group")
-                        .font(.subheadline)
-                }
+        ScrollView{
+            VStack {
+                Text("Profile")
+                .font(.title)
+                .padding(.top, -120)
                 
+                
+                HStack {
+                    VStack {
+                        Text("2")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.purple)
+                        Text("Events Hosted")
+                            .font(.subheadline)
+                    }
+                    VStack {
+                        Text("8")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.purple)
+                        Text("Events Attendees")
+                            .font(.subheadline)
+                    }
+                    VStack {
+                        Text("1")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.purple)
+                        Text("Friend Group")
+                            .font(.subheadline)
+                    }
+                    
+                }
+                .frame(width: 350.0)
+                .padding(.top, -60)
+                
+                Text("Pending Invitations")
+                    .font(.title)
+                    .padding(.top, 30)
+                    
+                InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
+                
+                InvitationView(imgName: $imgName2, dateTime: $dateTime2, eventName: $eventName2, loc: $loc2)
+                
+                Text("Upcoming Events")
+                    .font(.title)
+                    .padding(.top, 30)
+                UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
             }
-            .frame(width: 350.0)
-            .padding(.top, -60)
-            
-            Text("Pending Invitations")
-                .font(.title)
-                .padding(.top, 30)
-                
-            InvitationView(imgName: $imgName, dateTime: $dateTime, eventName: $eventName, loc: $loc)
-            
-            InvitationView(imgName: $imgName2, dateTime: $dateTime2, eventName: $eventName2, loc: $loc2)
-            
-            Text("Upcoming Events")
-                .font(.title)
-                .padding(.top, 30)
-            UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
         }
     }
 }

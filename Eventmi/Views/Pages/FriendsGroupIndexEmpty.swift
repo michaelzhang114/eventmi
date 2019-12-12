@@ -30,7 +30,7 @@ struct FriendsGroupIndexEmpty: View {
                             FriendGroupCard(index: $index)
                             .frame(width: 340.0)
                         }
-	                    if(self.data.listOfFriendGroups.count > 0){
+	                    if(self.data.listOfFriendGroups.count > 1){
                             NavigationLink(destination: GroupHomePage(groupIndex: $index1)){
                                 FriendGroupCard(index: $index1)
                                 .frame(width: 340.0)

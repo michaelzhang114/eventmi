@@ -20,47 +20,48 @@ struct CreateEventForm: View {
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
     var body: some View {
-        VStack (alignment: .center){
-            Text("Create Event")
-                .font(.title)
-            TextField("Event name", text: $eventName)
-                .padding()
-                .background(lightGreyColor)
-                .frame(width: 350.0)
-                .cornerRadius(5.0)
-                .padding()
-            Text("Date")
-                .fontWeight(.semibold)
-            DatePicker(selection: $dateTime, label: { Text("") })
-                .frame(width: 350.0)
-            TextField("Location", text: $location)
-                .padding()
-                .background(lightGreyColor)
-                .frame(width: 350.0)
-                .cornerRadius(5.0)
-                .padding()
-            GroupInviteView()
-            TextField("Add a description for your event?", text: $description)
-                .padding()
-                .background(lightGreyColor)
-                .frame(width: 350.0)
-                .cornerRadius(5.0)
-                .padding()
-                
-            Button(action: {
-                self.data.addNewEvent(e: self.eventName, dt: self.dateTime, loc: self.location, d: self.description)
-            }){
-                Text(btn)
+        ScrollView{
+            VStack (alignment: .center){
+                Text("Create Event")
                     .font(.title)
-                    .padding(10)
-                    .foregroundColor(Color.white)
+                TextField("Event name", text: $eventName)
+                    .padding()
+                    .background(lightGreyColor)
+                    .frame(width: 350.0)
+                    .cornerRadius(5.0)
+                    .padding()
+                Text("Date")
+                    .fontWeight(.semibold)
+                DatePicker(selection: $dateTime, label: { Text("") })
+                    .frame(width: 350.0)
+                TextField("Location", text: $location)
+                    .padding()
+                    .background(lightGreyColor)
+                    .frame(width: 350.0)
+                    .cornerRadius(5.0)
+                    .padding()
+                GroupInviteView()
+                TextField("Add a description for your event?", text: $description)
+                    .padding()
+                    .background(lightGreyColor)
+                    .frame(width: 350.0)
+                    .cornerRadius(5.0)
+                    .padding()
                     
+                Button(action: {
+                    self.data.addNewEvent(e: self.eventName, dt: self.dateTime, loc: self.location, d: self.description)
+                }){
+                    Text(btn)
+                        .font(.title)
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        
+                }
+                .frame(width: 350.0, height: 60)
+                .background(Color.purple)
             }
-            .frame(width: 350.0, height: 60)
-            .background(Color.purple)
+            .padding(.top, 50.0)
         }
-        .padding(.top, 50.0)
-
     }
 }
 

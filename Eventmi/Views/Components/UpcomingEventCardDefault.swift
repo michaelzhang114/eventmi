@@ -37,9 +37,8 @@ struct UpcomingEventCardDefault: View {
             
             VStack (alignment: .center){
                 HStack {
-                    GroupMember(groupMemberName: $member2)
-                        
-                    GroupMember(groupMemberName: $member3)
+                    GroupMemberDefault(groupName: $member2)
+                    GroupMemberDefault(groupName: $member3)
                         //.padding(.leading, 20)
                 }
                 //Text(member2 + " and " + member3 + " are going")
