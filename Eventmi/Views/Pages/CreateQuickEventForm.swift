@@ -11,12 +11,6 @@ import SwiftUI
 struct CreateQuickEventForm: View {
     
     @Binding var eventName: String
-    @Binding var day: String
-    @Binding var time: String
-    @Binding var groupName: String
-    @Binding var location: String
-    
-    
     @State var buttonName = "Create"
     
     var body: some View {
@@ -25,7 +19,7 @@ struct CreateQuickEventForm: View {
                 Text(eventName)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                Text(day)
+                Text("Today")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color.purple)
@@ -35,7 +29,7 @@ struct CreateQuickEventForm: View {
                 Text("at")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                Text(time)
+                Text("7pm")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color.purple)
@@ -44,11 +38,11 @@ struct CreateQuickEventForm: View {
             Text("with")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-            Text(groupName)
+            Text("WingMAN")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.purple)
-            Text("@" + location)
+            Text("@" + "location")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color.purple)
@@ -75,12 +69,8 @@ struct CreateQuickEventForm: View {
 
 struct CreateQuickEventForm_Previews: PreviewProvider {
     @State static var eventName = "Boba"
-    @State static var day = "Today"
-    @State static var time = "7pm"
-    @State static var groupName = "Hot pot squad"
-    @State static var location = "Quickly"
     
     static var previews: some View {
-        CreateQuickEventForm(eventName: $eventName, day: $day, time: $time, groupName: $groupName, location: $location)
+        CreateQuickEventForm(eventName: $eventName)
     }
 }

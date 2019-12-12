@@ -18,7 +18,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .tabItem {
                     VStack {
-                        Image("first")
+                        Image("discover")
                         Text("Discover")
                     }
                 }
@@ -26,7 +26,7 @@ struct ContentView: View {
             FriendsGroupIndexEmpty()
                 .tabItem {
                     VStack {
-                        Image("second")
+                        Image("groups")
                         Text("Groups")
                     }
                 }
@@ -34,7 +34,7 @@ struct ContentView: View {
             CreateEventForm()
             .tabItem {
                 VStack {
-                    Image("second")
+                    Image("create")
                     Text("Create Event")
                 }
             }
@@ -43,7 +43,7 @@ struct ContentView: View {
             .font(.title)
             .tabItem {
                 VStack {
-                    Image("second")
+                    Image("memories")
                     Text("Memories")
                 }
             }
@@ -51,7 +51,7 @@ struct ContentView: View {
             ProfilePage()
             .tabItem {
                 VStack {
-                    Image("second")
+                    Image("profile")
                     Text("Profile")
                 }
             }
