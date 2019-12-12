@@ -28,7 +28,7 @@ struct FriendsGroupIndexEmpty: View {
 //	                } else {
 //	                    FriendGroupCard(index: $index)
 //	                    .frame(width: 340.0)
-//	                    if(self.data.listOfFriendGroups.count > 0){
+//	                    if(self.data.listOfFriendGroups.count > 1){
 //	                        FriendGroupCard(index: $index1)
 //	                        .frame(width: 340.0)
 //	                    }

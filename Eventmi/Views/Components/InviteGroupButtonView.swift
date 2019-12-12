@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct InviteGroupButtonView: View {
-    @State private var hasClicked = false
+    @EnvironmentObject var data : DataController
     
+    @State private var hasClicked = false
+    @Binding var index: Int
+    
+
     var body: some View {
         HStack {
             Button(action: {
@@ -23,8 +27,16 @@ struct InviteGroupButtonView: View {
                         .padding()
                         .foregroundColor(hasClicked ? Color.clear : Color.black)
                         .cornerRadius(40)
-                        .onTapGesture { self.hasClicked.toggle()
-                    }
+                        .onTapGesture {
+                            self.hasClicked.toggle()
+                            if self.hasClicked {
+                                self.data.addFriendGroupToCurrentEvent(groupIndex: self.index)
+                            }
+                            else {
+                                self.data.removeFriendGroupToCurrentEvent(groupIndex: self.index)
+                            }
+                            
+                        }
                         .background(hasClicked ? Color.green : Color.clear)
                     
                     Text("Sent")
@@ -41,7 +53,9 @@ struct InviteGroupButtonView: View {
 }
 
 struct InviteGroupButtonView_Previews: PreviewProvider {
+    @State static var tmp: Int = 0
+    
     static var previews: some View {
-        InviteGroupButtonView()
+        InviteGroupButtonView(index: $tmp)
     }
 }
