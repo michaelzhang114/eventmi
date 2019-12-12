@@ -37,13 +37,21 @@ class DataController: ObservableObject {
     }
     
     func addNewEvent(e : String, dt : Date, loc : String, gr : [String], d : String) {
-        let ev = Event(e: e, dt: dt, loc: loc, gr: gr, d: d)
+        let ev = Event(eventName: e, dateTime: dt, location: loc, groupsInvited: gr, description: d)
         listOfEvents.append(ev)
     }
     
     struct FriendGroup {
         var groupName : String
         var members : [String]
+    }
+    
+    struct Event {
+        var eventName : String
+        var dateTime : Date
+        var location : String
+        var groupsInvited : [String]
+        var description : String
     }
     
 }
