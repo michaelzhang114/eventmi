@@ -20,7 +20,7 @@ struct GroupMember: View {
                .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
                .shadow(radius: 10)
                .frame(width: 50.0, height:50.0)
-            Text(self.data.listOfEvents[index].groupsInvited[index])
+            Text(self.data.listOfEvents[indexEvent].groupsInvited[index])
             .font(.footnote)
        }
     }

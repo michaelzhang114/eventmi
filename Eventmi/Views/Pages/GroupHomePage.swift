@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct GroupHomePage: View {
+    @EnvironmentObject var data: DataController
     
-    
+    @Binding var groupIndex: Int
     
 //    @State private var quickEvents = ["Chill?","Dinner?", "Boba?", "Lunch?", "Gym", "Ping Pong?"]
 //
@@ -45,15 +46,17 @@ struct GroupHomePage: View {
                     .fontWeight(.semibold)
                 // group members
                 HStack {
-                    GroupMember(groupMemberName: $member1)
-                    GroupMember(groupMemberName: $member2)
-                    GroupMember(groupMemberName: $member3)
+                    GroupMemberString(groupIndex: $groupIndex, memberIndex: $index1)
+                    GroupMemberString(groupIndex: $groupIndex, memberIndex: $index2)
                 }.padding(.bottom, 30)
                 
                 // label for upcoming events
                 Text("Upcoming Events")
                     .fontWeight(.semibold)
-                UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
+                UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
+                if(self.data.listOfEvents.count > 0){
+                    UpcomingEventCard(index: $index1)
+                }
                 
             }.frame(width: 350.0)
         }
