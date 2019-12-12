@@ -10,6 +10,8 @@ import SwiftUI
 
 struct FriendsGroupIndexEmpty: View {
     
+    @State var showView = false
+    
     @State var buttonName = "Create Friend Group"
     @State var index = 0
     @State var index1 = 1
@@ -23,6 +25,7 @@ struct FriendsGroupIndexEmpty: View {
                     .font(.title)
 	            VStack {
 	                SortFilterBarView()
+                    Spacer()
 	                if(self.data.listOfFriendGroups.isEmpty) {
 	                    Text("Oops, you have no friend groups yet!")
 	                } else {
@@ -37,12 +40,13 @@ struct FriendsGroupIndexEmpty: View {
                             }
 	                    }
 	                }
-	                NavigationLink(destination: CreateFriendGroupForm()) {
+                    Spacer()
+                    NavigationLink(destination: CreateFriendGroupForm(showView: self.$showView), isActive: self.$showView) {
 	                    Button(action: {
 	                    }){
 	                        Text(buttonName)
 	                            .font(.title)
-	                            .padding(10)
+	                            .padding(20)
 	                            .foregroundColor(Color.white)
 	                }
                         .frame(width: 350.0, height: 60)

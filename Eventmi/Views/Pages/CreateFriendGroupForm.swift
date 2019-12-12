@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CreateFriendGroupForm: View {
     @EnvironmentObject var data: DataController
+    @Binding var showView : Bool
     
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
@@ -17,7 +18,8 @@ struct CreateFriendGroupForm: View {
     @State private var name1 = "John"
     @State private var name2 = "Fatima"
     @State private var name3 = "Esther"
-
+    
+    @State var members : [String] = []
     @State var groupName : String = ""
     
     var body: some View {
@@ -31,7 +33,7 @@ struct CreateFriendGroupForm: View {
                     .frame(width: 350.0)
                     .cornerRadius(5.0)
                     .padding()
-                FriendInviteView()
+                FriendInviteView(membersList: $members)
                 Text("Contacts List")
                 .fontWeight(.semibold)
                 TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
@@ -41,12 +43,13 @@ struct CreateFriendGroupForm: View {
                 .cornerRadius(5.0)
                 .padding()
                 
-                ContactCardViewHorizontal(name: $name1)
-                ContactCardViewHorizontal(name: $name2)
-                ContactCardViewHorizontal(name: $name3)
+                ContactCardViewHorizontal(name: $name1, membersList: $members)
+                ContactCardViewHorizontal(name: $name2, membersList: $members)
+                ContactCardViewHorizontal(name: $name3, membersList: $members)
 
                 Button(action: {
-                    self.data.createNewFriendGroup(gName: self.groupName)
+                    self.showView = false
+                    self.data.createNewFriendGroup(gName: self.groupName, gMembers: self.members)
                 }){
                     Text(btn)
                         .font(.title)
@@ -63,7 +66,8 @@ struct CreateFriendGroupForm: View {
 }
 
 struct CreateFriendGroupForm_Previews: PreviewProvider {
+    @State static var showView: Bool = true
     static var previews: some View {
-        CreateFriendGroupForm()
+        CreateFriendGroupForm(showView: $showView)
     }
 }

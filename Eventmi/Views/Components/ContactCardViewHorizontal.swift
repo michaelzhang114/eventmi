@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContactCardViewHorizontal: View {
     @Binding var name : String
+    @Binding var membersList: [String]
     
     var body: some View {
         HStack {
@@ -20,7 +21,7 @@ struct ContactCardViewHorizontal: View {
                 .frame(width: 50.0, height:50.0)
             Text(name)
                 .font(.subheadline)
-            InviteButtonView(memberName: $name)
+            InviteButtonView(memberName: $name, membersList: $membersList)
         }
         .frame(width: 350.0)
         
@@ -29,7 +30,8 @@ struct ContactCardViewHorizontal: View {
 
 struct ContactCardViewHorizontal_Previews: PreviewProvider {
     @State static var name = "John"
+    @State static var membersList: [String] = []
     static var previews: some View {
-        ContactCardViewHorizontal(name: $name)
+        ContactCardViewHorizontal(name: $name, membersList: $membersList)
     }
 }

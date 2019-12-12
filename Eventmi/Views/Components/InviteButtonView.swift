@@ -11,12 +11,21 @@ import SwiftUI
 struct InviteButtonView: View {
     @State private var hasClicked = false
     @Binding var memberName: String
+    @Binding var membersList: [String]
     @EnvironmentObject var data: DataController
+    
+    func removeMember(_groupMember: String){
+        if let idx = self.membersList.firstIndex(of: self.memberName) {
+            self.membersList.remove(at: idx)
+        }
+    }
     
     var body: some View {
         HStack {
             Button(action: {
                 self.hasClicked.toggle()
+                self.hasClicked ? self.membersList.append(self.memberName) :
+                self.removeMember(_groupMember: self.memberName)
             }){
                 ZStack {
                     Text("Invite")
@@ -25,9 +34,6 @@ struct InviteButtonView: View {
                         .padding()
                         .foregroundColor(hasClicked ? Color.clear : Color.black)
                         .cornerRadius(40)
-                        .onTapGesture { self.hasClicked.toggle()
-                            self.hasClicked ? self.data.addToCurrentFriendGroup(memberName: self.memberName) : self.data.removeFromCurrentFriendGroup(memberName: self.memberName)
-                    }
                         .background(hasClicked ? Color.green : Color.clear)
                     
                     Text("Sent")
@@ -45,7 +51,12 @@ struct InviteButtonView: View {
 
 struct InviteButtonView_Previews: PreviewProvider {
     @State static var memberName: String = "Alethea"
+    @State static var membersList: [String] = []
     static var previews: some View {
-        InviteButtonView(memberName: $memberName)
+        InviteButtonView(memberName: $memberName, membersList: $membersList)
     }
 }
+
+//self.hasClicked ? self.membersList.append(self.memberName) :
+//   self.removeMember(_groupMember: self.memberName)
+//self.hasClicked.toggle()

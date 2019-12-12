@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct FriendInviteView: View {
+    @Binding var membersList: [String]
+    
     @State var name1 = "Alethea"
     @State var name2 = "Nathan"
     @State var name3 = "Nnamdi"
@@ -18,16 +20,17 @@ struct FriendInviteView: View {
             Text("Quick Add")
             .fontWeight(.semibold)
             HStack {
-                MemberCardView(memberName: $name1)
-                MemberCardView(memberName: $name2)
-                MemberCardView(memberName: $name3)
+                MemberCardView(memberName: $name1, membersList: $membersList)
+                MemberCardView(memberName: $name2, membersList: $membersList)
+                MemberCardView(memberName: $name3, membersList: $membersList)
             }
         }
     }
 }
 
 struct FriendInviteView_Previews: PreviewProvider {
+    @State static var membersList: [String] = []
     static var previews: some View {
-        FriendInviteView()
+        FriendInviteView(membersList: $membersList)
     }
 }

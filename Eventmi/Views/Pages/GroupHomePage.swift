@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct GroupHomePage: View {
+    @EnvironmentObject var data: DataController
     
     @Binding var groupIndex: Int
     
@@ -53,7 +54,9 @@ struct GroupHomePage: View {
             Text("Upcoming Events")
                 .fontWeight(.semibold)
             UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
-            UpcomingEventCard(index: $index1)
+            if(self.data.listOfEvents.count > 0){
+                UpcomingEventCard(index: $index1)
+            }
             
         }
         .frame(width: 350.0)

@@ -11,34 +11,21 @@ import Foundation
 class DataController: ObservableObject {
     @Published var listOfFriendGroups: [FriendGroup]
     @Published var listOfEvents: [Event]
-    @Published var currentGroup: [String]
     @Published var currentEventIndex: Int
     @Published var currentFriendGroupsInvited: [Int]
     
     init() {
         listOfFriendGroups = []
         listOfEvents = []
-        currentGroup = []
         currentEventIndex = 0
         currentFriendGroupsInvited = []
 //        listOfFriendGroups.append(FriendGroup(groupName: "group1", members: ["jack", "john"]))
 //        listOfFriendGroups.append(FriendGroup(groupName: "group2", members: ["nathan", "alethea"]))
     }
     
-    func addToCurrentFriendGroup(memberName: String){
-        currentGroup.append(memberName);
-    }
-    
-    func removeFromCurrentFriendGroup(memberName: String){
-        if let idx = currentGroup.firstIndex(of: memberName) {
-            currentGroup.remove(at: idx)
-        }
-    }
-    
-    func createNewFriendGroup(gName : String) {
-        let fg = FriendGroup(groupName: gName, members: currentGroup)
+    func createNewFriendGroup(gName : String, gMembers: [String]) {
+        let fg = FriendGroup(groupName: gName, members: gMembers)
         listOfFriendGroups.append(fg)
-        currentGroup = []
     }
     
     func addNewEvent(e : String, dt : Date, loc : String, d : String) {
