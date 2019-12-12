@@ -18,12 +18,12 @@ struct InvitationView: View {
     
     var body: some View {
         
-        HStack {
+        HStack (alignment: .center){
             Image(imgName)
                 .resizable()
                 .aspectRatio(CGSize(width:1.5, height:1.0), contentMode: .fit)
                 .shadow(radius: 10)
-                .frame(width: 110)
+                .frame(width: 80)
             VStack (alignment: .leading) {
                 Text(dateTime)
                     .foregroundColor(Color.purple)
@@ -35,6 +35,7 @@ struct InvitationView: View {
             LittleButton(name: $btnName)
         }
         .frame(width: 350.0)
+    
         
         
     }

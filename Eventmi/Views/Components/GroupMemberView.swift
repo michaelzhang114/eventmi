@@ -19,7 +19,7 @@ struct GroupMember: View {
                .shadow(radius: 10)
                .frame(width: 50.0, height:50.0)
            Text(groupMemberName)
-               .font(.subheadline)
+            .font(.footnote)
        }
     }
 }

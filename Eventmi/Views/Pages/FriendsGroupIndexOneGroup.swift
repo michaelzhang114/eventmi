@@ -18,13 +18,25 @@ struct FriendsGroupIndexOneGroup: View {
     var body: some View {
         
         VStack {
+            Text("Friend Groups")
+            .font(.title)
 
             SortFilterBarView()
           
             //FriendGroupCard()
                 .frame(width: 340.0)
             Spacer()
-     
+            //BigLongButtonView(name: $buttonName)
+            Button(action: {
+            }){
+                Text(buttonName)
+                    .font(.title)
+                    .padding(10)
+                    .foregroundColor(Color.white)
+                    
+            }
+            .frame(width: 350.0, height: 60)
+            .background(Color.purple)
         }
         .padding(.top, 50.0)
         .frame(width: 350.0)

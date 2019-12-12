@@ -13,6 +13,7 @@ class DataController: ObservableObject {
     @Published var listOfEvents: [Event]
     @Published var currentGroup: [String]
     
+    
     init() {
         listOfFriendGroups = []
         listOfEvents = []

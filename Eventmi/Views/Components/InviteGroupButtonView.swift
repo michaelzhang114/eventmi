@@ -19,7 +19,7 @@ struct InviteGroupButtonView: View {
                 ZStack {
                     Text("Invite")
                         .fontWeight(.semibold)
-                        .font(.title)
+                        .font(.subheadline)
                         .padding()
                         .foregroundColor(hasClicked ? Color.clear : Color.black)
                         .cornerRadius(40)
@@ -29,7 +29,7 @@ struct InviteGroupButtonView: View {
                     
                     Text("Sent")
                         .fontWeight(.semibold)
-                        .font(.title)
+                        .font(.subheadline)
                         .padding()
                         .cornerRadius(40)
                         .background(hasClicked ? Color.green : Color.clear)
