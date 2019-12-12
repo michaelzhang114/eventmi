@@ -10,7 +10,6 @@
 		B43BA1B223A1778B005974AA /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43BA1B123A1778B005974AA /* Event.swift */; };
 		B4466C042399C4BB001E6D6D /* CreateQuickEventForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */; };
 		B4466C062399C86C001E6D6D /* BigLongButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4466C052399C86C001E6D6D /* BigLongButtonView.swift */; };
-		B45BD69A239C8E0200F699D1 /* FriendGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD699239C8E0200F699D1 /* FriendGroup.swift */; };
 		B45BD69D239C8FA400F699D1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD69C239C8FA400F699D1 /* DataController.swift */; };
 		B45BD69F239C96D700F699D1 /* MemberCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD69E239C96D700F699D1 /* MemberCardView.swift */; };
 		B45BD6A1239CA38600F699D1 /* InviteGroupButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45BD6A0239CA38600F699D1 /* InviteGroupButtonView.swift */; };
@@ -64,7 +63,6 @@
 		B43BA1B123A1778B005974AA /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B4466C032399C4BB001E6D6D /* CreateQuickEventForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuickEventForm.swift; sourceTree = "<group>"; };
 		B4466C052399C86C001E6D6D /* BigLongButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigLongButtonView.swift; sourceTree = "<group>"; };
-		B45BD699239C8E0200F699D1 /* FriendGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroup.swift; sourceTree = "<group>"; };
 		B45BD69C239C8FA400F699D1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B45BD69E239C96D700F699D1 /* MemberCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCardView.swift; sourceTree = "<group>"; };
 		B45BD6A0239CA38600F699D1 /* InviteGroupButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteGroupButtonView.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 		B45BD69B239C8F3C00F699D1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B45BD699239C8E0200F699D1 /* FriendGroup.swift */,
 				B45BD69C239C8FA400F699D1 /* DataController.swift */,
 				B43BA1B123A1778B005974AA /* Event.swift */,
 			);
@@ -382,7 +379,6 @@
 				B49630E6239AE7220089B763 /* LittleButton.swift in Sources */,
 				B43BA1B223A1778B005974AA /* Event.swift in Sources */,
 				B49630E2239AE11A0089B763 /* ProfilePage.swift in Sources */,
-				B45BD69A239C8E0200F699D1 /* FriendGroup.swift in Sources */,
 				B4CEF6BF2396EF28001FA2EF /* GroupCardView.swift in Sources */,
 				F60291A82399B28700AB8A3B /* LoginPage.swift in Sources */,
 				F60291AE2399B95900AB8A3B /* SortFilterBarView.swift in Sources */,

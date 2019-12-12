@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct FriendGroupCard: View {
-    @Binding var groupName: String
-    @Binding var groupMembers: String
-    @Binding var numMembers: String
+    
+    @EnvironmentObject var data: DataController
+    @Binding var index: Int
     
     var body: some View {
         HStack {
@@ -23,9 +23,9 @@ struct FriendGroupCard: View {
             .frame(width: 50.0, height:50.0)
             
             VStack {
-                Text(groupName)
-                Text(groupMembers)
-                Text(numMembers)
+                Text(self.data.listOfFriendGroups[index].groupName)
+                Text(self.data.listOfFriendGroups[index].members.prefix(3).joined(separator: ", "))
+                Text(String(self.data.listOfFriendGroups[index].members.count) + "People")
             }
         }
         .frame(width: 340.0)
@@ -33,12 +33,8 @@ struct FriendGroupCard: View {
 }
 
 struct FriendGroupCard_Previews: PreviewProvider {
-    
-    @State static var name1 = "Hot Pot Squad"
-    @State static var members1 = "Alethea, Fatima, Nnamdi"
-    @State static var numMembers1 = "3 People"
-    
+    @State static var index: Int = 0
     static var previews: some View {
-        FriendGroupCard(groupName: $name1, groupMembers: $members1, numMembers: $numMembers1)
+        FriendGroupCard(index: $index)
     }
 }

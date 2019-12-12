@@ -29,12 +29,9 @@ class DataController: ObservableObject {
         }
     }
     
-    func createNewFriendGroup(groupName : String) {
-        let fg = FriendGroup(groupName: groupName)
-        
-        for member in currentGroup {
-            fg.addMember(name: member)
-        }
+    func createNewFriendGroup(gName : String) {
+        let fg = FriendGroup(groupName: gName, members: currentGroup)
+        listOfFriendGroups.append(fg)
         currentGroup = []
     }
     
@@ -43,6 +40,9 @@ class DataController: ObservableObject {
         listOfEvents.append(ev)
     }
     
-    
+    struct FriendGroup {
+        var groupName : String
+        var members : [String]
+    }
     
 }

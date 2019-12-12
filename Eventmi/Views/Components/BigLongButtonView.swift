@@ -15,7 +15,6 @@ struct BigLongButtonView: View {
     
     var body: some View {
         Button(action: {
-            self.data.createNewFriendGroup(groupName: self.groupName)
         }){
             Text(name)
                 .font(.title)

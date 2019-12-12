@@ -21,10 +21,9 @@ struct FriendsGroupIndexOneGroup: View {
 
             SortFilterBarView()
           
-            FriendGroupCard(groupName: $name1, groupMembers: $members1, numMembers: $numMembers1)
+            //FriendGroupCard()
                 .frame(width: 340.0)
             Spacer()
-            BigLongButtonView(name: $buttonName)
      
         }
         .padding(.top, 50.0)

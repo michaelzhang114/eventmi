@@ -23,7 +23,7 @@ struct MemberCardView: View {
             InviteButtonView(memberName: $memberName)
 
         }
-        .frame(width: 350.0)
+        .frame(width: 150.0)
     }
 }
 

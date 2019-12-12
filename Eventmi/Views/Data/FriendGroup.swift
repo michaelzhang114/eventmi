@@ -8,12 +8,13 @@
 
 import Foundation
 
-class FriendGroup {
+class FriendGroup2 {
     var groupName : String
     var members : [String]
     
     init(groupName : String) {
-        self.groupName = groupName
+        self.groupName = ""
+        self.members = []
     }
     
     func addMember(name : String) {

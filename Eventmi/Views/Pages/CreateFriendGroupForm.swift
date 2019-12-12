@@ -43,7 +43,7 @@ struct CreateFriendGroupForm: View {
             ContactCardViewHorizontal(name: $name3)
 
             Button(action: {
-                self.data.createNewFriendGroup(groupName: self.groupName)
+                self.data.createNewFriendGroup(gName: self.groupName)
             }){
                 Text(btn)
                     .font(.title)
