@@ -75,7 +75,7 @@ struct ProfilePage: View {
             Text("Upcoming Events")
                 .font(.title)
                 .padding(.top, 30)
-            UpcomingEventCard(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
+            UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
         }
     }
 }
