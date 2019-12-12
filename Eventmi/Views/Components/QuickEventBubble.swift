@@ -13,11 +13,13 @@ struct QuickEventBubble: View {
     @Binding var size: CGFloat
     
     var body: some View {
-        Arc(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
-        .fill(Color.purple)
-        .frame(width: size, height: size)
-        .overlay(
-        Text(quickEventName))
+        NavigationLink(destination: CreateQuickEventForm(eventName: $quickEventName)) {
+            Arc(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
+            .fill(Color.purple)
+            .frame(width: size, height: size)
+            .overlay(Text(quickEventName))
+        }
+        
     }
 }
 

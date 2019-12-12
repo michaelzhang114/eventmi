@@ -14,11 +14,14 @@ class DataController: ObservableObject {
     @Published var currentEventIndex: Int
     @Published var currentFriendGroupsInvited: [Int]
     
+    @Published var listOfQuickEvents : [String]
+    
     init() {
         listOfFriendGroups = []
         listOfEvents = []
         currentEventIndex = 0
         currentFriendGroupsInvited = []
+        listOfQuickEvents = ["Chill?","Dinner?", "Boba?", "Lunch?", "Gym", "Ping Pong?", "Games", "Wine", "Coffee"]
 //        listOfFriendGroups.append(FriendGroup(groupName: "group1", members: ["jack", "john"]))
 //        listOfFriendGroups.append(FriendGroup(groupName: "group2", members: ["nathan", "alethea"]))
     }
@@ -44,6 +47,15 @@ class DataController: ObservableObject {
     func removeFriendGroupToCurrentEvent(groupIndex : Int) {
         if groupIndex < currentFriendGroupsInvited.count {
             currentFriendGroupsInvited.remove(at: groupIndex)
+        }
+    }
+    
+    func getLatestEvent() -> String {
+        if (listOfEvents.isEmpty) {
+            return "Coffee"
+        }
+        else {
+            return listOfEvents[listOfEvents.count - 1].eventName
         }
     }
     
