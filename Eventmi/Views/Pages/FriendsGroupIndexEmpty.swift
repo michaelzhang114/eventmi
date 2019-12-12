@@ -23,16 +23,16 @@ struct FriendsGroupIndexEmpty: View {
                     .font(.title)
 	            VStack {
 	                SortFilterBarView()
-	                if(self.data.listOfFriendGroups.isEmpty) {
-	                    Text("Oops, you have no friend groups yet!")
-	                } else {
-	                    FriendGroupCard(index: $index)
-	                    .frame(width: 340.0)
-	                    if(self.data.listOfFriendGroups.count > 0){
-	                        FriendGroupCard(index: $index1)
-	                        .frame(width: 340.0)
-	                    }
-	                }
+//	                if(self.data.listOfFriendGroups.isEmpty) {
+//	                    Text("Oops, you have no friend groups yet!")
+//	                } else {
+//	                    FriendGroupCard(index: $index)
+//	                    .frame(width: 340.0)
+//	                    if(self.data.listOfFriendGroups.count > 0){
+//	                        FriendGroupCard(index: $index1)
+//	                        .frame(width: 340.0)
+//	                    }
+//	                }
 	                NavigationLink(destination: CreateFriendGroupForm()) {
 	                    Button(action: {
 	                    }){
@@ -40,7 +40,9 @@ struct FriendsGroupIndexEmpty: View {
 	                            .font(.title)
 	                            .padding(10)
 	                            .foregroundColor(Color.white)
-	                }            
+	                }
+                        .frame(width: 350.0, height: 60)
+                        .background(Color.purple)
                     }
                 }
             }.padding(.top, 50.0)
