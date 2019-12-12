@@ -36,6 +36,9 @@ class DataController: ObservableObject {
         for ind in currentFriendGroupsInvited {
             listOfGroupNames.append(listOfFriendGroups[ind].groupName)
         }
+        if (currentFriendGroupsInvited.count == 0) {
+            listOfGroupNames = ["John", "Nathan"]
+        }
         let ev = Event(eventName: e, dateTime: dt, location: loc, groupsInvited: listOfGroupNames, description: d)
         listOfEvents.append(ev)
     }
