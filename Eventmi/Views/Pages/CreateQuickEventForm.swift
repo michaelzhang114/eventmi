@@ -11,6 +11,7 @@ import SwiftUI
 struct CreateQuickEventForm: View {
     @EnvironmentObject var data : DataController
     @Binding var eventName: String
+    @Binding var showView : Bool
     @State var buttonName = "Create"
     
     var body: some View {
@@ -48,7 +49,7 @@ struct CreateQuickEventForm: View {
                 .foregroundColor(Color.purple)
             //BigLongButtonView(name: $buttonName)
             Button(action: {
-                
+                self.showView = false
                 self.data.addNewEvent(e: self.eventName, dt: Date(), loc: "West Campus", d: "let's have fun")
                 //self.selection = 1
                 
@@ -74,8 +75,8 @@ struct CreateQuickEventForm: View {
 
 struct CreateQuickEventForm_Previews: PreviewProvider {
     @State static var eventName = "Boba"
-    
+    @State static var showView = false
     static var previews: some View {
-        CreateQuickEventForm(eventName: $eventName)
+        CreateQuickEventForm(eventName: $eventName, showView: $showView)
     }
 }

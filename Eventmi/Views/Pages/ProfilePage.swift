@@ -11,8 +11,6 @@ import SwiftUI
 struct ProfilePage: View {
     @EnvironmentObject var data: DataController
     
-    @EnvironmentObject var data: DataController
-    
     // pending invite #1
     @State var imgName = "icecream"
     @State var dateTime = "Fri, Nov 8th; 6pm"
@@ -32,9 +30,6 @@ struct ProfilePage: View {
     @State var index1 = 0
     @State var index2 = 1
     @State var index3 = 2
-    
-    
-    @State var index1 = 0
     
     var body: some View {
         ScrollView{
