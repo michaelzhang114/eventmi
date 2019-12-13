@@ -33,15 +33,26 @@ struct GroupHomePage: View {
     @State var size1 = CGFloat(100)
     @State var size2 = CGFloat(50)
     
+    struct NavigationConfigurator: UIViewControllerRepresentable {
+        var configure: (UINavigationController) -> Void = { _ in }
+
+        func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationConfigurator>) -> UIViewController {
+            UIViewController()
+        }
+        func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<NavigationConfigurator>) {
+            if let nc = uiViewController.navigationController {
+                self.configure(nc)
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     // label
-                    Text(self.data.listOfFriendGroups[groupIndex].groupName)
-                    .font(.title)
                     // bubbles
-                    BubblesView().padding(.bottom, 30)
+                    BubblesView().padding(.bottom, 30).padding(.top, 20)
                     
                     // label for group members
                     Text("Members")
@@ -72,7 +83,15 @@ struct GroupHomePage: View {
                     
                 }.frame(width: 350.0)
             }
-        }.padding(.top, -70.0)
+            .navigationBarTitle(Text(self.data.listOfFriendGroups[groupIndex].groupName), displayMode: .inline)
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.barTintColor = .white
+                nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
+                nc.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.black]
+                nc.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+                nc.navigationBar.shadowImage = UIImage()
+            })
+        }.padding(.top, -1.0).edgesIgnoringSafeArea(.top)
     }
 }
 

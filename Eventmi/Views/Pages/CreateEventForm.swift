@@ -29,7 +29,11 @@ struct CreateEventForm: View {
                     .padding()
                     .background(lightGreyColor)
                     .frame(width: 350.0)
-                    .cornerRadius(5.0)
+                    .cornerRadius(10.0)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.purple, lineWidth: 2)
+                    )
                     .padding(.bottom, 5.0)
                 Text("Date")
                     .fontWeight(.semibold)
