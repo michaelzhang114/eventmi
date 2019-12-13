@@ -77,7 +77,7 @@ struct ProfilePage: View {
                     .font(.title)
                     .padding(.top, -10)
                 UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
-            }
+            }.padding(.top, 140.0)
         }
     }
 }

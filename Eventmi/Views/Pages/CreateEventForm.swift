@@ -30,9 +30,10 @@ struct CreateEventForm: View {
                     .background(lightGreyColor)
                     .frame(width: 350.0)
                     .cornerRadius(5.0)
-                    .padding()
+                    .padding(.bottom, 5.0)
                 Text("Date")
                     .fontWeight(.semibold)
+                .padding(.bottom, 0.0)
                 DatePicker(selection: $dateTime, label: { Text("") })
                     .frame(width: 350.0)
                 TextField("Location", text: $location)
@@ -40,7 +41,7 @@ struct CreateEventForm: View {
                     .background(lightGreyColor)
                     .frame(width: 350.0)
                     .cornerRadius(5.0)
-                    .padding()
+//                    .padding()
                 GroupInviteView()
                 TextField("Add a description for your event?", text: $description)
                     .padding()
@@ -61,7 +62,7 @@ struct CreateEventForm: View {
                 }
                 .frame(width: 350.0, height: 60)
                 .background(Color.purple)
-            }
+            }.padding(.top, 20.0)
             
         }
     }

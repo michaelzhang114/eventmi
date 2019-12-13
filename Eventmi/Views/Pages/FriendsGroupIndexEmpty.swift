@@ -33,6 +33,7 @@ struct FriendsGroupIndexEmpty: View {
                             FriendGroupCard(index: $index)
                             .frame(width: 340.0)
                         }
+                        .foregroundColor(Color.purple)
 	                    if(self.data.listOfFriendGroups.count > 1){
                             NavigationLink(destination: GroupHomePage(groupIndex: $index1)){
                                 FriendGroupCard(index: $index1)
@@ -51,10 +52,12 @@ struct FriendsGroupIndexEmpty: View {
 	                }
                         .frame(width: 350.0, height: 60)
                         .background(Color.purple)
+                        .padding(.bottom, 20.0)
                     }
                 }
-            }.padding(.top, -10.0)
+            }.padding(.top, -75.0)
         }.frame(width: 350.0)
+        
     }
 }
 

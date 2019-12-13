@@ -51,6 +51,7 @@ struct GroupInviteView: View {
             }
         }
         .frame(width: 350.0)
+        .padding(.bottom, -20.0)
     }
 }
 

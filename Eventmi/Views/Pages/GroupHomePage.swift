@@ -65,7 +65,7 @@ struct GroupHomePage: View {
                     
                 }.frame(width: 350.0)
             }
-        }.padding(.top, -20.0)
+        }.padding(.top, -70.0)
         
     }
 }
