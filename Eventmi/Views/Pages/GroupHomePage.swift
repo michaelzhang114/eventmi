@@ -38,7 +38,7 @@ struct GroupHomePage: View {
             ScrollView {
                 VStack {
                     // label
-                    Text("Groups")
+                    Text(self.data.listOfFriendGroups[groupIndex].groupName)
                     .font(.title)
                     // bubbles
                     BubblesView().padding(.bottom, 30)
@@ -66,7 +66,6 @@ struct GroupHomePage: View {
                 }.frame(width: 350.0)
             }
         }.padding(.top, -70.0)
-        
     }
 }
 

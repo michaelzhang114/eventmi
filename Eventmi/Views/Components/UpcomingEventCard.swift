@@ -53,7 +53,7 @@ struct UpcomingEventCard: View {
                         //.padding(.leading, 20)
                 }
                 //Text(member2 + " and " + member3 + " are going")
-                Text("are going")
+                Text("is going")
                 .font(.footnote)
             }
         }

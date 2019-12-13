@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ProfilePage: View {
+    @EnvironmentObject var data: DataController
     
     // pending invite #1
     @State var imgName = "icecream"
@@ -26,6 +27,8 @@ struct ProfilePage: View {
     @State var eventName1 = "Boba"
     @State var eventLoc1 = "1100 Pace Street"
     
+    
+    @State var index1 = 0
     
     var body: some View {
         ScrollView{
@@ -77,6 +80,10 @@ struct ProfilePage: View {
                     .font(.title)
                     .padding(.top, -10)
                 UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
+                
+                if(self.data.listOfEvents.count > 0){
+                    UpcomingEventCard(index: $index1)
+                }
             }.padding(.top, 140.0)
         }
     }
