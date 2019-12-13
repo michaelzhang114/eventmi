@@ -18,51 +18,62 @@ struct LoginPage: View {
     
     @State var btn = "Log in"
     
+    @State private var showContent = false
+    
     var body: some View {
-        NavigationView {
+        //NavigationView {
             
         
         VStack {
-            Image("eventmi-logo")
-            .resizable()
-            .shadow(radius: 10)
-            .frame(width: 310.0, height:240)
             
-            VStack(spacing: -28.0) {
-                TextField("Phone Number", text: $phoneNumber)
-                .padding()
-                .background(lightGreyColor)
-                    .frame(width: 350.0)
-                    .cornerRadius(5.0)
-                    .padding()
-                SecureField("Password", text: $password)
-                .padding()
-                .background(lightGreyColor)
-                    .frame(width: 350.0)
-                    .cornerRadius(5.0)
-                .padding()
-                
+            if (showContent) {
+                ContentView()
             }
-            
-            VStack {
-                NavigationLink (destination: ContentView()){
-                    Button(action: {
-                    }){
-                        Text(btn)
-                            .font(.title)
-                            .padding(10)
-                            .foregroundColor(Color.white)
-                            
-                    }
-                    .frame(width: 350.0, height: 60)
-                    .background(Color.purple)
+            else {
+                VStack {
+                    Image("eventmi-logo")
+                    .resizable()
+                    .shadow(radius: 10)
+                    .frame(width: 310.0, height:240)
+                    
+                    VStack(spacing: -28.0) {
+                        TextField("Phone Number", text: $phoneNumber)
+                        .padding()
+                        .background(lightGreyColor)
+                            .frame(width: 350.0)
+                            .cornerRadius(5.0)
+                            .padding()
+                        SecureField("Password", text: $password)
+                        .padding()
+                        .background(lightGreyColor)
+                            .frame(width: 350.0)
+                            .cornerRadius(5.0)
+                        .padding()
                 }
+                    
                 
+                    
+                        Button(action: {
+                            self.showContent.toggle()
+                        }){
+                            //NavigationLink (destination: ContentView()){
+                                Text(btn)
+                                .font(.title)
+                                .padding(10)
+                                .foregroundColor(Color.white)
+                            //}
+                        }
+                        .frame(width: 350.0, height: 60)
+                        .background(Color.purple)
+                }
+                }//.navigationBarTitle("")
             }
-        }
+            
+            
+        
         
         }
-    }
+    //}
 }
 
 struct LoginPage_Previews: PreviewProvider {
