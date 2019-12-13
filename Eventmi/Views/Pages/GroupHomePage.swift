@@ -88,7 +88,6 @@ struct GroupHomePage: View {
                 nc.navigationBar.barTintColor = .white
                 nc.navigationBar.titleTextAttributes = [.foregroundColor : UIColor.black]
                 nc.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.black]
-                nc.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
                 nc.navigationBar.shadowImage = UIImage()
             })
         }.padding(.top, -1.0).edgesIgnoringSafeArea(.top)
