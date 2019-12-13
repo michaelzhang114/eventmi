@@ -42,17 +42,17 @@ struct FriendsGroupIndexEmpty: View {
 	                    }
 	                }
                     Spacer()
-                    NavigationLink(destination: CreateFriendGroupForm(showView: self.$showView), isActive: self.$showView) {
-	                    Button(action: {
-	                    }){
-	                        Text(buttonName)
-	                            .font(.title)
-	                            .padding(20)
-	                            .foregroundColor(Color.white)
-	                }
-                        .frame(width: 350.0, height: 60)
-                        .background(Color.purple)
-                        .padding(.bottom, 20.0)
+                    
+                    Button(action: {}){
+                        NavigationLink(destination: CreateFriendGroupForm(showView: self.$showView), isActive: self.$showView) {
+                        Text(buttonName)
+                            .font(.title)
+                            .padding(20)
+                            .foregroundColor(Color.white)
+                    }
+                    .frame(width: 350.0, height: 60)
+                    .background(Color.purple)
+                    .padding(.bottom, 20.0)
                     }
                 }
             }.padding(.top, -75.0)

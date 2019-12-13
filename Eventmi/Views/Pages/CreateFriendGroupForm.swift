@@ -61,7 +61,7 @@ struct CreateFriendGroupForm: View {
                 }){
                     Text(btn)
                         .font(.title)
-                        .padding(10)
+                        .padding(20)
                         .foregroundColor(Color.white)
                         
                 }
