@@ -565,14 +565,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Eventmi/Preview Content\"";
-				DEVELOPMENT_TEAM = B3K8B5B7FQ;
+				DEVELOPMENT_TEAM = 4V68PFKTL6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Eventmi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ECE590.Eventmi;
+				PRODUCT_BUNDLE_IDENTIFIER = ECE590.Eventmi.Michael;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -585,14 +585,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Eventmi/Preview Content\"";
-				DEVELOPMENT_TEAM = B3K8B5B7FQ;
+				DEVELOPMENT_TEAM = 4V68PFKTL6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Eventmi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ECE590.Eventmi;
+				PRODUCT_BUNDLE_IDENTIFIER = ECE590.Eventmi.Michael;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

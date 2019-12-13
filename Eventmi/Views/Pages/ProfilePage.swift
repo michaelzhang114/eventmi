@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ProfilePage: View {
+    @EnvironmentObject var data: DataController
     
     @EnvironmentObject var data: DataController
     
@@ -32,6 +33,8 @@ struct ProfilePage: View {
     @State var index2 = 1
     @State var index3 = 2
     
+    
+    @State var index1 = 0
     
     var body: some View {
         ScrollView{
@@ -95,7 +98,7 @@ struct ProfilePage: View {
                         UpcomingEventCard(index: $index3)
                     }
                 }
-            }
+            }.padding(.top, 140.0)
         }
     }
 }

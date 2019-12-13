@@ -36,7 +36,15 @@ struct CreateFriendGroupForm: View {
                 FriendInviteView(membersList: $members)
                 Text("Contacts List")
                 .fontWeight(.semibold)
-                TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                .padding(.bottom, -5.0)
+                HStack {
+                    Image(systemName: "magnifyingglass")
+//                    .resizable()
+//                    .aspectRatio(CGSize(width:1.0, height:1.0), contentMode: .fit)
+//                    .shadow(radius: 10)
+//                    .frame(width: 50.0, height:50.0)
+                    TextField("Search for friends", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                }
                 .padding()
                 .background(lightGreyColor)
                 .frame(width: 350.0)
@@ -53,14 +61,14 @@ struct CreateFriendGroupForm: View {
                 }){
                     Text(btn)
                         .font(.title)
-                        .padding(10)
+                        .padding(20)
                         .foregroundColor(Color.white)
                         
                 }
                 .frame(width: 350.0, height: 60)
                 .background(Color.purple)
                 .padding(.top, 20)
-            }.padding(.top, -10.0)
+            }.padding(.top, -75.0)
         }
     }
 }

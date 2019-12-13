@@ -19,6 +19,7 @@ struct QuickEventBubble: View {
             .frame(width: size, height: size)
             .overlay(Text(quickEventName))
         }
+        .foregroundColor(Color.white)
         
     }
 }
