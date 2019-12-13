@@ -12,8 +12,10 @@ struct QuickEventBubble: View {
     @Binding var quickEventName: String
     @Binding var size: CGFloat
     
+    @State var showView = false
+    
     var body: some View {
-        NavigationLink(destination: CreateQuickEventForm(eventName: $quickEventName)) {
+        NavigationLink(destination: CreateQuickEventForm(eventName: $quickEventName, showView: self.$showView), isActive: self.$showView) {
             Arc(startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
             .fill(Color.purple)
             .frame(width: size, height: size)

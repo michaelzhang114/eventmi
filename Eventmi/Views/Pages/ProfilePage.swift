@@ -27,8 +27,9 @@ struct ProfilePage: View {
     @State var eventName1 = "Boba"
     @State var eventLoc1 = "1100 Pace Street"
     
-    
     @State var index1 = 0
+    @State var index2 = 1
+    @State var index3 = 2
     
     var body: some View {
         ScrollView{
@@ -79,10 +80,18 @@ struct ProfilePage: View {
                 Text("Upcoming Events")
                     .font(.title)
                     .padding(.top, -10)
-                UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
-                
-                if(self.data.listOfEvents.count > 0){
+                Text("Upcoming Events")
+                    .fontWeight(.semibold)
+                if(self.data.listOfEvents.isEmpty){
+                    Text("You have no upcoming events yet!")
+                } else {
                     UpcomingEventCard(index: $index1)
+                    if(self.data.listOfEvents.count > 1){
+                        UpcomingEventCard(index: $index2)
+                    }
+                    if(self.data.listOfEvents.count > 2){
+                        UpcomingEventCard(index: $index3)
+                    }
                 }
             }.padding(.top, 140.0)
         }

@@ -58,9 +58,16 @@ struct GroupHomePage: View {
                     // label for upcoming events
                     Text("Upcoming Events")
                         .fontWeight(.semibold)
-                    UpcomingEventCardDefault(upcomingEventDateTime: $eventDateTime1, upcomingEventName: $eventName1, upcomingEventLocation: $eventLoc1)
-                    if(self.data.listOfEvents.count > 0){
+                    if(self.data.listOfEvents.isEmpty){
+                        Text("You have no upcoming events yet!")
+                    } else {
                         UpcomingEventCard(index: $index1)
+                        if(self.data.listOfEvents.count > 1){
+                            UpcomingEventCard(index: $index2)
+                        }
+                        if(self.data.listOfEvents.count > 2){
+                            UpcomingEventCard(index: $index3)
+                        }
                     }
                     
                 }.frame(width: 350.0)
